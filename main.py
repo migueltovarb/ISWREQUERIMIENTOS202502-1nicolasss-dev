@@ -62,6 +62,7 @@ def anadir_contacto():
         contactos.append(contacto)
         print('Contacto añadido correctamente')
         
+    # si hay un error se guarda en la variable e y se muestra
     except ValueError as e:
         print(f'Error: {e}')
 

@@ -1,3 +1,4 @@
+
 # La clase de contacto y defino todas las funciones necesarias
 
 class Contacto:
