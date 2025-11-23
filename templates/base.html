@@ -6,26 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}MyDOG - Sistema Veterinario{% endblock %}</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'img/logo-mydog-mascota.png' %}">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap CSS (para estructura base) -->
+    <!-- Bootstrap CSS + Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     
     {% block extra_css %}{% endblock %}
+    
+    <style>
+        /* Sticky footer con flexbox */
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-mydog">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-mydog shadow-sm">
+        <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'img/${logo_header}.png' %}" alt="MyDOG Logo" height="48" class="d-inline-block align-text-top">
+                <img src="{% static 'img/logo-mydog-blanco.png' %}" alt="MyDOG" height="45" class="d-inline-block">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -123,7 +144,7 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <img src="{% static 'img/${logo_footer}.png' %}" alt="MyDOG Footer" height="32" class="mb-2">
+            <img src="{% static 'img/logo-mydog-negro.png' %}" alt="MyDOG" height="32" class="mb-2">
             <p class="text-muted mb-0">&copy; 2025 MyDOG - Sistema de Gestión Veterinaria</p>
         </div>
     </footer>

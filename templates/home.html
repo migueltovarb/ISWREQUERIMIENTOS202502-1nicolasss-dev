@@ -10,6 +10,34 @@
     </div>
 </div>
 
+{% if user.rol == 'PROPIETARIO' %}
+{# Dashboard para PROPIETARIOS #}
+<div class="row mt-4">
+    <div class="col-md-6 mb-3">
+        <div class="card shadow-sm border-0 text-white bg-primary-mydog">
+            <div class="card-body text-center">
+                <i class="bi bi-heart-pulse fs-1 mb-2"></i>
+                <h3 class="font-titulo">Mis Mascotas</h3>
+                <p>Consulta el historial médico de tus mascotas</p>
+                <a href="{% url 'historiales:mis_mascotas' %}" class="btn btn-light btn-sm mt-2">Ver Mascotas</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="bi bi-bell fs-1 mb-2 text-primary-mydog"></i>
+                <h3 class="font-titulo">Notificaciones</h3>
+                <p>Revisa tus recordatorios y mensajes</p>
+                <a href="{% url 'notificaciones:lista' %}" class="btn btn-outline-primary btn-sm mt-2">Ver Notificaciones</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+{# Dashboard para STAFF (Admin, Vet, Administrativo) #}
 <div class="row mt-4">
     <div class="col-md-3 mb-3">
         <div class="card shadow-sm border-0 text-white bg-primary-mydog">
@@ -51,4 +79,5 @@
         </div>
     </div>
 </div>
+{% endif %}
 {% endblock %}

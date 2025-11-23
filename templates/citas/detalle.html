@@ -39,8 +39,15 @@
                 {% endif %}
                 
                 <div class="d-flex justify-content-between mt-4 border-top pt-3">
-                    <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Volver al Calendario</a>
+                    {# Botón de navegación según rol del usuario #}
+                    {% if user.rol != 'PROPIETARIO' %}
+                        <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Volver al Calendario</a>
+                    {% else %}
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary">Volver al Inicio</a>
+                    {% endif %}
                     
+                    {# Acciones solo para staff (Admin, Veterinario, Administrativo) #}
+                    {% if user.rol != 'PROPIETARIO' %}
                     <div class="btn-group">
                         {% if cita.estado == 'PROGRAMADA' %}
                             <a href="{% url 'citas:cancelar' cita.pk %}" class="btn btn-outline-danger">Cancelar Cita</a>
@@ -48,7 +55,7 @@
                             <a href="{% url 'citas:confirmar' cita.pk %}" class="btn btn-success">Confirmar Asistencia</a>
                         {% endif %}
                         
-                        {% if cita.estado == 'CONFIRMADA' %}
+                        {% if cita.estado == 'CONFIRMADA' and user.es_veterinario %}
                             <a href="{% url 'historiales:registrar_cita' cita.mascota.pk cita.pk %}" class="btn btn-primary-mydog">Iniciar Consulta</a>
                         {% endif %}
 
@@ -64,6 +71,7 @@
                             {% endif %}
                         {% endif %}
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -15,7 +15,11 @@
                     {{ form|crispy }}
                     
                     <div class="d-flex justify-content-end gap-2 mt-4">
-                        <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        {% if user.rol != 'PROPIETARIO' %}
+                            <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        {% else %}
+                            <a href="{% url 'home' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        {% endif %}
                         <button type="submit" class="btn btn-primary-mydog">Agendar Cita</button>
                     </div>
                 </form>

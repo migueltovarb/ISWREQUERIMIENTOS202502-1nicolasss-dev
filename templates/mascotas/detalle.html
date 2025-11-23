@@ -31,7 +31,9 @@
                     <a href="{% url 'historiales:lista_mascota' mascota.pk %}" class="btn btn-primary-mydog">
                         <i class="bi bi-file-medical-fill"></i> Ver Historial Médico
                     </a>
+                    {% if user.rol != 'PROPIETARIO' %}
                     <a href="{% url 'mascotas:editar' mascota.pk %}" class="btn btn-outline-primary">Editar Información</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -53,7 +55,9 @@
         <div class="card shadow-sm border-0">
             <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
                 <h5 class="font-titulo text-primary-mydog mb-0">Próximas Citas</h5>
+                {% if user.rol != 'PROPIETARIO' %}
                 <a href="{% url 'citas:agendar' %}" class="btn btn-sm btn-outline-primary">Agendar Cita</a>
+                {% endif %}
             </div>
             <div class="card-body p-0">
                 <div class="list-group list-group-flush">

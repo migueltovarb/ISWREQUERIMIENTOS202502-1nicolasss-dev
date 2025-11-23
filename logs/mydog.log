@@ -2937,3 +2937,589 @@ INFO 2025-11-22 23:50:17,930 basehttp "GET /citas/ HTTP/1.1" 200 9008
 WARNING 2025-11-22 23:50:18,002 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
 WARNING 2025-11-22 23:50:18,018 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
 INFO 2025-11-22 23:50:18,088 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-22 23:54:53,023 basehttp "GET /citas/2/ HTTP/1.1" 200 7055
+INFO 2025-11-22 23:54:53,081 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-22 23:54:53,083 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+WARNING 2025-11-22 23:54:53,095 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:54:53,096 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:54:53,160 log Not Found: /favicon.ico
+INFO 2025-11-22 23:54:53,161 basehttp - Broken pipe from ('127.0.0.1', 61110)
+INFO 2025-11-22 23:54:55,028 basehttp "GET /citas/ HTTP/1.1" 200 9008
+WARNING 2025-11-22 23:54:55,091 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:54:55,096 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-22 23:54:55,170 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-22 23:54:57,815 basehttp "GET /citas/4/ HTTP/1.1" 200 7042
+WARNING 2025-11-22 23:54:57,892 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:54:57,899 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-22 23:54:59,219 basehttp "GET /pagos/3/ HTTP/1.1" 200 7015
+WARNING 2025-11-22 23:54:59,285 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:54:59,285 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-22 23:55:01,012 basehttp "GET /pagos/ HTTP/1.1" 200 8843
+WARNING 2025-11-22 23:55:01,072 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:55:01,077 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-22 23:55:02,934 basehttp "GET /citas/ HTTP/1.1" 200 9008
+WARNING 2025-11-22 23:55:02,993 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:55:03,001 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-22 23:55:03,068 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-22 23:55:07,480 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-22 23:55:07,490 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4421
+WARNING 2025-11-22 23:55:07,546 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-22 23:55:07,546 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:04:53,036 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:04:53,062 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+INFO 2025-11-23 00:04:53,101 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 00:04:53,106 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+WARNING 2025-11-23 00:04:53,117 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:04:53,118 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:12:24,593 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:12:24,599 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:12:24,660 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:12:24,664 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:14:34,471 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:14:34,477 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:14:34,529 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:14:34,535 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:00,603 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+INFO 2025-11-23 00:35:00,639 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 00:35:00,640 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+WARNING 2025-11-23 00:35:00,652 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:00,653 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:01,020 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:01,070 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:01,071 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:01,202 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:01,247 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:01,254 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:01,561 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:01,593 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:01,598 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:01,782 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:01,818 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:01,824 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:20,396 basehttp "POST /autenticacion/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:35:20,425 basehttp "GET / HTTP/1.1" 200 7394
+WARNING 2025-11-23 00:35:20,472 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:20,477 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:26,423 basehttp "GET /pagos/ HTTP/1.1" 200 9598
+WARNING 2025-11-23 00:35:26,479 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:26,482 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:26,535 log Not Found: /favicon.ico
+INFO 2025-11-23 00:35:26,537 basehttp - Broken pipe from ('127.0.0.1', 61547)
+INFO 2025-11-23 00:35:30,559 basehttp "GET /propietarios/ HTTP/1.1" 200 8971
+WARNING 2025-11-23 00:35:30,602 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:30,607 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:47,076 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:35:47,100 basehttp "GET / HTTP/1.1" 200 7394
+WARNING 2025-11-23 00:35:47,138 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:47,143 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:47,900 basehttp "GET / HTTP/1.1" 200 7394
+WARNING 2025-11-23 00:35:47,928 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:47,933 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:50,467 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:35:50,474 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4421
+WARNING 2025-11-23 00:35:50,522 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:50,527 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:50,569 log Not Found: /favicon.ico
+INFO 2025-11-23 00:35:50,571 basehttp - Broken pipe from ('127.0.0.1', 61604)
+INFO 2025-11-23 00:35:51,392 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:51,426 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:51,431 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:51,885 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:51,919 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:51,924 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:52,267 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:52,301 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:52,306 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:52,580 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:52,620 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:52,627 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:52,789 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4108
+WARNING 2025-11-23 00:35:52,837 basehttp "GET /static/img/%24%7Blogo_header%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:52,842 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:53,203 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:53,228 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:54,796 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:54,831 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:55,483 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:55,537 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:56,049 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:56,098 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:57,220 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:57,250 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+WARNING 2025-11-23 00:35:57,264 log Not Found: /favicon.ico
+WARNING 2025-11-23 00:35:57,264 basehttp "GET /favicon.ico HTTP/1.1" 404 3944
+INFO 2025-11-23 00:35:58,057 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:58,087 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:35:58,553 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:35:58,596 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:36:09,386 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 3397
+WARNING 2025-11-23 00:36:09,415 basehttp "GET /static/img/%24%7Blogo_footer%7D.png HTTP/1.1" 404 1997
+INFO 2025-11-23 00:36:29,175 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4375
+INFO 2025-11-23 00:36:29,208 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:36:29,214 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:36:29,351 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 00:36:31,787 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:36:31,795 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4375
+INFO 2025-11-23 00:36:31,868 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 00:36:32,389 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:36:32,396 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4375
+INFO 2025-11-23 00:36:47,252 basehttp "GET /autenticacion/login/?next=/ HTTP/1.1" 200 4375
+INFO 2025-11-23 00:36:47,282 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:36:47,282 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:36:47,292 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 00:36:51,367 basehttp "POST /autenticacion/login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:36:51,395 basehttp "GET / HTTP/1.1" 200 7661
+INFO 2025-11-23 00:36:51,553 basehttp - Broken pipe from ('127.0.0.1', 61747)
+INFO 2025-11-23 00:36:58,240 basehttp "GET /citas/ HTTP/1.1" 200 10030
+INFO 2025-11-23 00:36:58,283 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:36:58,284 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:36:58,350 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-23 00:36:59,148 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7416
+INFO 2025-11-23 00:36:59,574 basehttp "GET /notificaciones/ HTTP/1.1" 200 6341
+INFO 2025-11-23 00:37:01,579 basehttp "GET /citas/ HTTP/1.1" 200 10030
+INFO 2025-11-23 00:37:01,691 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-23 00:37:02,487 basehttp "GET / HTTP/1.1" 200 7661
+INFO 2025-11-23 00:37:53,853 basehttp "GET / HTTP/1.1" 200 7661
+INFO 2025-11-23 00:37:53,891 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 00:37:53,893 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 00:37:53,900 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:37:53,900 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:38:01,375 basehttp "GET / HTTP/1.1" 200 7661
+INFO 2025-11-23 00:38:01,437 basehttp - Broken pipe from ('127.0.0.1', 61778)
+INFO 2025-11-23 00:38:11,113 basehttp "GET / HTTP/1.1" 200 7661
+INFO 2025-11-23 00:38:11,165 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:38:11,166 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:38:11,185 basehttp - Broken pipe from ('127.0.0.1', 61873)
+INFO 2025-11-23 00:38:13,160 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:38:13,181 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4607
+INFO 2025-11-23 00:38:16,863 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:38:16,888 basehttp "GET / HTTP/1.1" 200 7580
+INFO 2025-11-23 00:38:16,957 basehttp - Broken pipe from ('127.0.0.1', 61746)
+INFO 2025-11-23 00:38:18,765 basehttp "GET / HTTP/1.1" 200 7580
+INFO 2025-11-23 00:38:56,677 basehttp "GET / HTTP/1.1" 200 7903
+INFO 2025-11-23 00:38:56,699 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:38:56,704 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:38:56,714 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 00:38:59,839 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:38:59,858 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 00:38:59,918 basehttp - Broken pipe from ('127.0.0.1', 61956)
+INFO 2025-11-23 00:39:08,802 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:39:08,828 basehttp "GET / HTTP/1.1" 200 7148
+INFO 2025-11-23 00:39:08,892 basehttp - Broken pipe from ('127.0.0.1', 61891)
+INFO 2025-11-23 00:39:12,657 basehttp "GET /citas/ HTTP/1.1" 200 9517
+INFO 2025-11-23 00:39:12,772 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+WARNING 2025-11-23 00:39:15,502 log Not Found: /favicon.ico
+INFO 2025-11-23 00:39:15,504 basehttp - Broken pipe from ('127.0.0.1', 62032)
+INFO 2025-11-23 00:40:46,497 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:40:46,504 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 00:40:46,560 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:40:46,561 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:42:10,162 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:42:10,185 basehttp "GET / HTTP/1.1" 200 7903
+INFO 2025-11-23 00:42:10,231 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:42:10,231 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:42:11,762 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:42:11,770 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 00:42:16,363 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4617
+INFO 2025-11-23 00:43:02,020 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:43:02,048 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:43:02,079 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:43:02,142 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:43:02,142 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:43:08,068 basehttp "GET /historiales/mascota/5/ HTTP/1.1" 200 4772
+INFO 2025-11-23 00:43:09,298 basehttp "GET /mascotas/5/ HTTP/1.1" 200 7362
+INFO 2025-11-23 00:43:11,386 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-23 00:43:11,417 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:43:12,497 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:43:14,038 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+WARNING 2025-11-23 00:43:17,232 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:43:17,233 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:43:17,367 log Not Found: /favicon.ico
+INFO 2025-11-23 00:43:17,368 basehttp - Broken pipe from ('127.0.0.1', 62100)
+WARNING 2025-11-23 00:44:03,186 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:44:03,187 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:44:42,237 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:44:42,238 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:44:42,849 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:44:42,849 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:44:50,627 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:44:50,628 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+INFO 2025-11-23 00:44:55,977 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\views.py changed, reloading.
+INFO 2025-11-23 00:44:56,098 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\views.py changed, reloading.
+INFO 2025-11-23 00:44:57,383 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 00:44:57,384 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-23 00:44:58,382 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:44:58,383 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:45:18,544 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:45:18,545 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:45:18,987 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:45:18,988 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:45:19,160 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:45:19,161 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:45:19,426 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:45:19,427 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:45:19,601 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:45:19,601 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+INFO 2025-11-23 00:52:06,708 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+WARNING 2025-11-23 00:52:07,722 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:52:07,722 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:52:17,545 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:52:17,545 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+INFO 2025-11-23 00:52:19,251 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:52:19,279 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:52:19,282 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+WARNING 2025-11-23 00:52:20,080 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:52:20,080 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+INFO 2025-11-23 00:53:13,287 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:13,318 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 00:53:13,318 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 00:53:13,922 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:14,258 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:14,756 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:14,931 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:15,076 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:15,228 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:15,342 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:23,307 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6732
+INFO 2025-11-23 00:53:23,377 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 00:53:23,380 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 00:53:23,384 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:53:23,384 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:53:24,213 basehttp - Broken pipe from ('127.0.0.1', 55624)
+WARNING 2025-11-23 00:53:25,169 log Not Found: /citas/agendar/
+WARNING 2025-11-23 00:53:25,169 basehttp "GET /citas/agendar/ HTTP/1.1" 404 3748
+WARNING 2025-11-23 00:53:25,239 log Not Found: /favicon.ico
+INFO 2025-11-23 00:53:25,240 basehttp - Broken pipe from ('127.0.0.1', 55623)
+INFO 2025-11-23 00:53:36,615 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:53:44,170 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 00:53:46,832 basehttp "GET /notificaciones/ HTTP/1.1" 200 4709
+INFO 2025-11-23 00:53:48,528 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:53:49,810 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:53:51,655 basehttp "GET /historiales/3/ HTTP/1.1" 200 7488
+INFO 2025-11-23 00:53:53,547 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:53:56,283 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+ERROR 2025-11-23 00:54:00,544 log Internal Server Error: /mascotas/4/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\mascotas\views.py", line 35, in detalle_mascota
+    return render(request, 'mascotas/detalle.html', {'mascota': mascota})
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-11-23 00:54:00,552 basehttp "GET /mascotas/4/ HTTP/1.1" 500 197909
+ERROR 2025-11-23 00:54:04,080 log Internal Server Error: /mascotas/4/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\mascotas\views.py", line 35, in detalle_mascota
+    return render(request, 'mascotas/detalle.html', {'mascota': mascota})
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-11-23 00:54:04,086 basehttp "GET /mascotas/4/ HTTP/1.1" 500 197909
+ERROR 2025-11-23 00:54:07,619 log Internal Server Error: /mascotas/4/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\mascotas\views.py", line 35, in detalle_mascota
+    return render(request, 'mascotas/detalle.html', {'mascota': mascota})
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-11-23 00:54:07,624 basehttp "GET /mascotas/4/ HTTP/1.1" 500 197909
+INFO 2025-11-23 00:54:43,513 basehttp "GET /historiales/3/ HTTP/1.1" 200 7488
+INFO 2025-11-23 00:54:58,965 basehttp "GET /mascotas/4/ HTTP/1.1" 200 6566
+INFO 2025-11-23 00:55:01,487 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:55:02,638 basehttp "GET /notificaciones/ HTTP/1.1" 200 4709
+INFO 2025-11-23 00:55:04,277 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:55:05,557 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:55:05,620 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 00:55:14,551 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:55:14,579 basehttp "GET / HTTP/1.1" 200 7157
+INFO 2025-11-23 00:55:14,626 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:55:14,627 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:55:19,618 basehttp "GET /citas/ HTTP/1.1" 200 9520
+INFO 2025-11-23 00:55:19,770 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1671
+INFO 2025-11-23 00:55:27,763 basehttp "GET /citas/agendar/ HTTP/1.1" 200 11266
+INFO 2025-11-23 00:55:29,650 basehttp "GET /citas/ajax/cargar-mascotas/?propietario_id=4 HTTP/1.1" 200 30
+INFO 2025-11-23 00:55:32,433 basehttp "GET /citas/ajax/cargar-mascotas/?propietario_id=3 HTTP/1.1" 200 58
+INFO 2025-11-23 00:55:47,870 basehttp "POST /citas/agendar/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:55:47,911 basehttp "GET /citas/ HTTP/1.1" 200 9830
+INFO 2025-11-23 00:55:48,046 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 1874
+INFO 2025-11-23 00:55:50,481 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:55:50,491 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 00:55:54,693 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 00:55:54,724 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 00:55:55,903 basehttp "GET /notificaciones/ HTTP/1.1" 200 4709
+INFO 2025-11-23 00:55:56,964 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:55:58,754 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7240
+INFO 2025-11-23 00:56:00,020 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:56:08,920 basehttp "GET /citas/10/reprogramar/ HTTP/1.1" 200 6074
+INFO 2025-11-23 00:56:11,739 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+WARNING 2025-11-23 00:56:13,061 log Not Found: /citas/
+WARNING 2025-11-23 00:56:13,061 basehttp "GET /citas/ HTTP/1.1" 404 3194
+WARNING 2025-11-23 00:57:19,232 log Not Found: /citas/
+WARNING 2025-11-23 00:57:19,233 basehttp "GET /citas/ HTTP/1.1" 404 3194
+INFO 2025-11-23 00:57:30,921 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:57:30,962 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 00:57:30,964 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 00:57:32,388 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7240
+INFO 2025-11-23 00:57:34,410 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 00:57:36,048 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:57:37,505 basehttp "GET /historiales/mascota/5/ HTTP/1.1" 200 4772
+INFO 2025-11-23 00:57:40,035 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:57:41,942 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7240
+INFO 2025-11-23 00:57:46,372 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:57:48,772 basehttp "GET /historiales/3/ HTTP/1.1" 200 7488
+INFO 2025-11-23 00:57:50,132 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 00:57:51,478 basehttp "GET /notificaciones/ HTTP/1.1" 200 4709
+INFO 2025-11-23 00:57:56,056 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:58:00,756 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7190
+INFO 2025-11-23 00:58:11,941 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5638
+INFO 2025-11-23 00:58:14,273 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7240
+INFO 2025-11-23 00:58:15,536 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+WARNING 2025-11-23 00:58:16,992 log Not Found: /citas/
+WARNING 2025-11-23 00:58:16,992 basehttp "GET /citas/ HTTP/1.1" 404 3194
+INFO 2025-11-23 00:58:18,799 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:19,246 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:19,544 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:19,678 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:19,844 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:20,164 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:20,488 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:58:23,109 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8366
+INFO 2025-11-23 00:58:30,337 basehttp "GET /mascotas/5/editar/ HTTP/1.1" 200 8710
+INFO 2025-11-23 00:58:33,571 basehttp "GET /mascotas/4/editar/ HTTP/1.1" 200 8707
+INFO 2025-11-23 00:58:50,163 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7486
+INFO 2025-11-23 00:59:05,789 basehttp "GET /mascotas/registrar/3/ HTTP/1.1" 200 8674
+INFO 2025-11-23 00:59:18,140 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:59:18,762 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:59:18,980 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:59:19,125 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+INFO 2025-11-23 00:59:19,477 basehttp "GET /citas/10/ HTTP/1.1" 200 6505
+WARNING 2025-11-23 00:59:20,320 log Not Found: /citas/
+WARNING 2025-11-23 00:59:20,321 basehttp "GET /citas/ HTTP/1.1" 404 3194
+INFO 2025-11-23 01:04:55,645 basehttp "GET /citas/10/ HTTP/1.1" 200 6083
+INFO 2025-11-23 01:04:55,682 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:04:55,684 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:05:00,333 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 01:07:32,390 basehttp "GET / HTTP/1.1" 200 5359
+INFO 2025-11-23 01:07:41,612 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:07:41,734 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3755
+INFO 2025-11-23 01:07:41,786 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-11-23 01:07:41,786 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-11-23 01:07:41,787 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-11-23 01:07:41,810 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:41,811 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:41,811 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:41,829 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+WARNING 2025-11-23 01:07:41,896 log Not Found: /favicon.ico
+INFO 2025-11-23 01:07:41,897 basehttp - Broken pipe from ('127.0.0.1', 63281)
+INFO 2025-11-23 01:07:44,463 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:07:44,555 basehttp "GET /admin/ HTTP/1.1" 200 22192
+INFO 2025-11-23 01:07:44,621 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-11-23 01:07:44,645 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-11-23 01:07:44,645 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-11-23 01:07:46,753 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 28323
+INFO 2025-11-23 01:07:46,793 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-11-23 01:07:46,810 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-11-23 01:07:46,810 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-11-23 01:07:46,855 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:07:46,868 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-11-23 01:07:46,868 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-11-23 01:07:46,868 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-11-23 01:07:46,983 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,983 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,983 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,984 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,984 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,986 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:46,987 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-11-23 01:07:47,041 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-11-23 01:07:47,042 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-11-23 01:07:47,047 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-11-23 01:07:51,691 basehttp "GET /admin/autenticacion/usuario/6/change/ HTTP/1.1" 200 45598
+INFO 2025-11-23 01:07:51,744 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-11-23 01:07:51,754 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-11-23 01:07:51,754 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-23 01:07:51,757 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-23 01:07:51,758 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-11-23 01:07:51,759 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:07:51,768 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2025-11-23 01:07:51,768 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-11-23 01:07:51,777 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-11-23 01:07:51,850 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-11-23 01:07:51,858 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-11-23 01:07:51,858 basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
