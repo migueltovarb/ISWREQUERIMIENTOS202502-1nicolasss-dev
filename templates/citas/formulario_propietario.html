@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}Agendar Cita - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary-mydog text-white py-3">
+                <h3 class="mb-0 font-titulo">
+                    <i class="bi bi-calendar-plus"></i> {{ titulo }}
+                </h3>
+            </div>
+            <div class="card-body p-4">
+                <!-- Información del propietario -->
+                <div class="alert alert-info mb-4">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>{{ propietario.nombre }}</strong> - Agendando cita para una de tus mascotas
+                </div>
+
+                <!-- Instrucciones -->
+                <div class="alert alert-light border mb-4">
+                    <h6 class="fw-bold mb-2"><i class="bi bi-lightbulb"></i> Instrucciones:</h6>
+                    <ul class="mb-0 small">
+                        <li>Selecciona la mascota para la cual deseas agendar la cita</li>
+                        <li>Elige el tipo de servicio que necesitas</li>
+                        <li>Puedes seleccionar un veterinario de tu preferencia o dejar que asignemos uno automáticamente</li>
+                        <li>Describe brevemente el motivo de la consulta</li>
+                        <li>Recibirás una notificación de confirmación y un recordatorio 24 horas antes</li>
+                    </ul>
+                </div>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <!-- Mascota -->
+                    <div class="mb-3">
+                        <label for="{{ form.mascota.id_for_label }}" class="form-label fw-bold">
+                            {{ form.mascota.label }} <span class="text-danger">*</span>
+                        </label>
+                        {{ form.mascota }}
+                        {% if form.mascota.errors %}
+                            <div class="text-danger small mt-1">{{ form.mascota.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Servicio -->
+                    <div class="mb-3">
+                        <label for="{{ form.servicio.id_for_label }}" class="form-label fw-bold">
+                            {{ form.servicio.label }} <span class="text-danger">*</span>
+                        </label>
+                        {{ form.servicio }}
+                        {% if form.servicio.errors %}
+                            <div class="text-danger small mt-1">{{ form.servicio.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Veterinario -->
+                    <div class="mb-3">
+                        <label for="{{ form.veterinario.id_for_label }}" class="form-label fw-bold">
+                            {{ form.veterinario.label }}
+                        </label>
+                        {{ form.veterinario }}
+                        {% if form.veterinario.help_text %}
+                            <div class="form-text">{{ form.veterinario.help_text }}</div>
+                        {% endif %}
+                        {% if form.veterinario.errors %}
+                            <div class="text-danger small mt-1">{{ form.veterinario.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="row">
+                        <!-- Fecha -->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.fecha.id_for_label }}" class="form-label fw-bold">
+                                {{ form.fecha.label }} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.fecha }}
+                            {% if form.fecha.help_text %}
+                                <div class="form-text">{{ form.fecha.help_text }}</div>
+                            {% endif %}
+                            {% if form.fecha.errors %}
+                                <div class="text-danger small mt-1">{{ form.fecha.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Hora -->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.hora.id_for_label }}" class="form-label fw-bold">
+                                {{ form.hora.label }} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.hora }}
+                            {% if form.hora.help_text %}
+                                <div class="form-text">{{ form.hora.help_text }}</div>
+                            {% endif %}
+                            {% if form.hora.errors %}
+                                <div class="text-danger small mt-1">{{ form.hora.errors }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="mb-4">
+                        <label for="{{ form.observaciones.id_for_label }}" class="form-label fw-bold">
+                            {{ form.observaciones.label }} <span class="text-danger">*</span>
+                        </label>
+                        {{ form.observaciones }}
+                        {% if form.observaciones.errors %}
+                            <div class="text-danger small mt-1">{{ form.observaciones.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex gap-2 justify-content-end">
+                        <a href="{% url 'propietarios:detalle' propietario.id %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle"></i> Cancelar
+                        </a>
+                        <button type="submit" class="btn btn-primary-mydog">
+                            <i class="bi bi-calendar-check"></i> Agendar Cita
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="card shadow-sm border-0 mt-3">
+            <div class="card-body">
+                <h6 class="fw-bold mb-2"><i class="bi bi-clock-history"></i> Horario de Atención</h6>
+                <p class="mb-2 small">Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+                <p class="mb-0 small text-muted">
+                    <i class="bi bi-info-circle"></i> 
+                    Si necesitas cancelar o reprogramar, hazlo con al menos 6 horas de anticipación.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

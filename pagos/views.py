@@ -24,9 +24,14 @@ def registrar_pago(request, cita_id=None):
         if request.user.rol == 'PROPIETARIO' and cita.propietario.usuario_id != request.user.id:
             messages.error(request, 'No tienes permisos para pagar esta cita.')
             return redirect('home')
+            
+    # Buscar si ya existe un pago pendiente para esta cita
+    pago_pendiente = None
+    if cita:
+        pago_pendiente = Pago.objects.filter(cita=cita, estado='PENDIENTE').first()
     
     if request.method == 'POST':
-        form = PagoForm(request.POST, cita_id=cita_id)
+        form = PagoForm(request.POST, cita_id=cita_id, instance=pago_pendiente)
         if form.is_valid():
             with transaction.atomic():
                 pago = form.save(commit=False)
@@ -63,7 +68,7 @@ def registrar_pago(request, cita_id=None):
                 
                 return redirect('pagos:detalle', pk=pago.pk)
     else:
-        form = PagoForm(cita_id=cita_id)
+        form = PagoForm(cita_id=cita_id, instance=pago_pendiente)
     
     context = {
         'form': form,

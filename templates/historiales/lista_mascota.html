@@ -12,6 +12,11 @@
         <a href="{% url 'mascotas:detalle' mascota.pk %}" class="btn btn-outline-secondary">
             <i class="bi bi-arrow-left"></i> Volver a Mascota
         </a>
+        {% if user.rol == 'PROPIETARIO' and user.propietario.id == mascota.propietario.id %}
+        <a href="{% url 'mascotas:registrar' mascota.propietario.id %}" class="btn btn-primary-mydog">
+            <i class="bi bi-plus-lg"></i> Nueva Mascota
+        </a>
+        {% endif %}
         {% if user.rol == 'VETERINARIO' or user.is_superuser %}
         <a href="{% url 'historiales:registrar' mascota.pk %}" class="btn btn-primary-mydog">
             <i class="bi bi-file-medical-fill"></i> Nueva Consulta

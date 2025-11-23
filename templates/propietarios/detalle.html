@@ -3,6 +3,41 @@
 {% block title %}{{ propietario.nombre }} - MyDOG{% endblock %}
 
 {% block content %}
+
+<!-- Quick Actions for Owners -->
+{% if user.rol == 'PROPIETARIO' and user.propietario.id == propietario.pk %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card shadow-sm border-0 bg-light">
+            <div class="card-body py-3">
+                <div class="row g-2">
+                    <div class="col-md-3">
+                        <a href="{% url 'citas:agendar_propietario' %}" class="btn btn-success w-100">
+                            <i class="bi bi-calendar-plus"></i> Agendar Cita
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'mascotas:registrar' propietario.pk %}" class="btn btn-primary-mydog w-100">
+                            <i class="bi bi-plus-lg"></i> Nueva Mascota
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'notificaciones:lista' %}" class="btn btn-outline-primary w-100">
+                            <i class="bi bi-bell"></i> Notificaciones
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'propietarios:editar' propietario.pk %}" class="btn btn-outline-secondary w-100">
+                            <i class="bi bi-pencil"></i> Editar Perfil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 <div class="row">
     <!-- Información del Propietario -->
     <div class="col-md-4 mb-4">
@@ -30,9 +65,9 @@
                     <p class="mb-0">{{ propietario.direccion|default:"No registrada" }}</p>
                 </div>
                 
-                {% if user.rol != 'PROPIETARIO' or user.propietario.id == propietario.pk %}
+                {% if user.rol != 'PROPIETARIO' %}
                 <div class="d-grid gap-2 mt-4">
-                    <a href="{% url 'propietarios:editar' propietario.pk %}" class="btn btn-outline-primary">Editar Información</a>
+                    <a href="{% url 'propietarios:editar' propietario.pk %}\" class="btn btn-outline-primary">Editar Información</a>
                 </div>
                 {% endif %}
             </div>
@@ -43,21 +78,26 @@
     <div class="col-md-8">
         <div class="card shadow-sm border-0">
             <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
-                <h3 class="font-titulo text-primary-mydog mb-0">Mascotas</h3>
-                {% if user.rol != 'PROPIETARIO' or user.propietario.id == propietario.pk %}
-                <a href="{% url 'mascotas:registrar' propietario.pk %}" class="btn btn-sm btn-primary-mydog">
-                    <i class="bi bi-plus-lg"></i> Nueva Mascota
-                </a>
+                <h3 class="font-titulo text-primary-mydog mb-0">Mis Mascotas</h3>
+                {% if user.rol != 'PROPIETARIO' %}
+                <div class="d-flex gap-2">
+                    <a href="{% url 'citas:agendar' %}\" class="btn btn-sm btn-success">
+                        <i class="bi bi-calendar-plus"></i> Agendar Cita
+                    </a>
+                    <a href="{% url 'mascotas:registrar' propietario.pk %}\" class="btn btn-sm btn-primary-mydog">
+                        <i class="bi bi-plus-lg"></i> Nueva Mascota
+                    </a>
+                </div>
                 {% endif %}
             </div>
             <div class="card-body p-0">
                 <div class="list-group list-group-flush">
                     {% for mascota in propietario.mascotas.all %}
-                    <a href="{% url 'mascotas:editar' mascota.pk %}" class="list-group-item list-group-item-action p-3">
+                    <a href="{% url 'mascotas:editar' mascota.pk %}\" class="list-group-item list-group-item-action p-3">
                         <div class="d-flex w-100 justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-3">
                                 {% if mascota.foto %}
-                                    <img src="{{ mascota.foto.url }}" alt="{{ mascota.nombre }}" class="rounded-circle" width="50" height="50" style="object-fit: cover;">
+                                    <img src="{{ mascota.foto.url }}\" alt="{{ mascota.nombre }}\" class="rounded-circle" width="50" height="50" style="object-fit: cover;">
                                 {% else %}
                                     <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
                                         <i class="bi bi-paw text-muted"></i>
@@ -68,12 +108,25 @@
                                     <small class="text-muted">{{ mascota.especie }} - {{ mascota.raza }}</small>
                                 </div>
                             </div>
-                            <span class="badge bg-light text-dark">{{ mascota.edad }} años</span>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge bg-light text-dark">{{ mascota.edad }} años</span>
+                                {% if user.rol == 'PROPIETARIO' %}
+                                <a href="{% url 'historiales:lista_mascota' mascota.pk %}" class="btn btn-sm btn-outline-info" onclick="event.stopPropagation();">
+                                    <i class="bi bi-file-medical"></i> Historial
+                                </a>
+                                {% endif %}
+                            </div>
                         </div>
                     </a>
                     {% empty %}
-                    <div class="text-center py-4 text-muted">
-                        <p class="mb-0">Este propietario no tiene mascotas registradas.</p>
+                    <div class="text-center py-5">
+                        <i class="bi bi-paw text-muted" style="font-size: 3rem;"></i>
+                        <p class="text-muted mt-3 mb-3">No tienes mascotas registradas</p>
+                        {% if user.rol == 'PROPIETARIO' and user.propietario.id == propietario.pk %}
+                        <a href="{% url 'mascotas:registrar' propietario.pk %}\" class="btn btn-primary-mydog">
+                            <i class="bi bi-plus-lg"></i> Registrar mi primera mascota
+                        </a>
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
@@ -83,25 +136,25 @@
 </div>
 
 <!-- Citas Pendientes de Pago -->
-{% if citas_pendientes_pago %}
+{% if pagos_pendientes %}
 <div class="row mt-4">
     <div class="col-12">
         <div class="card shadow-sm border-0">
             <div class="card-header bg-white border-0 py-3">
                 <h3 class="font-titulo text-primary-mydog mb-0">
-                    <i class="bi bi-credit-card"></i> Citas Pendientes de Pago
+                    <i class="bi bi-credit-card"></i> Pagos Pendientes
                 </h3>
             </div>
             <div class="card-body">
                 <div class="alert alert-warning">
                     <i class="bi bi-exclamation-triangle"></i>
-                    <strong>Atención:</strong> Tiene {{ citas_pendientes_pago.count }} cita(s) completada(s) pendiente(s) de pago.
+                    <strong>Atención:</strong> Tiene {{ pagos_pendientes.count }} pago(s) pendiente(s).
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
                         <thead class="table-light">
                             <tr>
-                                <th>Fecha</th>
+                                <th>Fecha Cita</th>
                                 <th>Mascota</th>
                                 <th>Servicio</th>
                                 <th>Veterinario</th>
@@ -110,24 +163,79 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for cita in citas_pendientes_pago %}
+                            {% for pago in pagos_pendientes %}
                             <tr>
-                                <td>{{ cita.fecha|date:"d/m/Y" }} {{ cita.hora|time:"H:i" }}</td>
+                                <td>{{ pago.cita.fecha|date:"d/m/Y" }} {{ pago.cita.hora|time:"H:i" }}</td>
                                 <td>
-                                    <strong>{{ cita.mascota.nombre }}</strong>
-                                    <br><small class="text-muted">{{ cita.mascota.especie }}</small>
+                                    <strong>{{ pago.cita.mascota.nombre }}</strong>
+                                    <br><small class="text-muted">{{ pago.cita.mascota.especie }}</small>
                                 </td>
-                                <td>{{ cita.servicio.get_nombre_display }}</td>
-                                <td>Dr. {{ cita.veterinario.get_full_name }}</td>
+                                <td>{{ pago.cita.servicio.get_nombre_display }}</td>
+                                <td>Dr. {{ pago.cita.veterinario.get_full_name }}</td>
                                 <td>
-                                    <strong class="text-success">${{ cita.servicio.precio|floatformat:0 }}</strong>
+                                    <strong class="text-success">${{ pago.monto|floatformat:0 }}</strong>
                                 </td>
                                 <td>
-                                    <a href="{% url 'pagos:registrar' cita.id %}" class="btn btn-sm btn-success">
+                                    <a href="{% url 'pagos:registrar_cita' pago.cita.id %}" class="btn btn-sm btn-success">
                                         <i class="bi bi-credit-card"></i> Pagar
                                     </a>
-                                    <a href="{% url 'citas:detalle' cita.id %}" class="btn btn-sm btn-outline-secondary">
-                                        <i class="bi bi-eye"></i> Ver
+                                    <a href="{% url 'citas:detalle' pago.cita.id %}" class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-eye"></i> Ver Cita
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Historial de Pagos Completados -->
+{% if pagos_completados %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0 py-3">
+                <h3 class="font-titulo text-primary-mydog mb-0">
+                    <i class="bi bi-receipt"></i> Historial de Pagos
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Fecha Pago</th>
+                                <th>Concepto</th>
+                                <th>Método</th>
+                                <th>Monto</th>
+                                <th>Referencia</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for pago in pagos_completados %}
+                            <tr>
+                                <td>{{ pago.fecha_pago|date:"d/m/Y H:i" }}</td>
+                                <td>
+                                    {% if pago.cita %}
+                                        {{ pago.cita.servicio.get_nombre_display }} - {{ pago.cita.mascota.nombre }}
+                                    {% else %}
+                                        Pago General
+                                    {% endif %}
+                                </td>
+                                <td>{{ pago.get_tipo_pago_display }}</td>
+                                <td>
+                                    <strong class="text-dark">${{ pago.monto|floatformat:0 }}</strong>
+                                </td>
+                                <td>{{ pago.referencia|default:"-" }}</td>
+                                <td>
+                                    <a href="{% url 'pagos:detalle' pago.id %}" class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-file-earmark-text"></i> Ver Recibo
                                     </a>
                                 </td>
                             </tr>

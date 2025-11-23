@@ -14,8 +14,10 @@
 
 ✅ **Gestión de Citas** con calendario interactivo  
 ✅ **Historiales Clínicos** completos y trazables  
+✅ **Recordatorios Automáticos** 24h antes de citas  
 ✅ **Sistema de Pagos** simulados con generación de facturas PDF  
 ✅ **Notificaciones** automáticas simuladas  
+✅ **Certificados de Vacunación** en PDF  
 ✅ **Reportes** en PDF y Excel  
 ✅ **Control de Acceso** basado en roles (RBAC)  
 ✅ **Diseño Responsive** adaptado a móvil, tablet y desktop  

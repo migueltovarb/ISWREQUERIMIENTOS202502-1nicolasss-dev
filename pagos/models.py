@@ -21,6 +21,7 @@ class Pago(models.Model):
         ('EFECTIVO', 'Efectivo'),
         ('TARJETA', 'Tarjeta'),
         ('TRANSFERENCIA', 'Transferencia'),
+        ('PENDIENTE', 'Pendiente'),
     ]
     
     ESTADO_CHOICES = [

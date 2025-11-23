@@ -3,11 +3,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
 from .models import Cita
-from .forms import CitaForm
+from .forms import CitaForm, CitaPropietarioForm
 from mascotas.models import Mascota
 from datetime import datetime
 from autenticacion.decorators import staff_required
+from autenticacion.models import Usuario
 from notificaciones.services import crear_evento_cita
+from notificaciones.models import Notificacion
+from pagos.models import Pago
 
 @login_required
 @staff_required
@@ -58,6 +61,17 @@ def agendar_cita(request):
             cita = form.save(commit=False)
             cita.usuario_creador = request.user
             cita.save()
+            
+            # Crear registro de pago pendiente automático
+            Pago.objects.create(
+                cita=cita,
+                propietario=cita.propietario,
+                monto=cita.servicio.precio,
+                tipo_pago='PENDIENTE',
+                estado='PENDIENTE',
+                usuario_registro=request.user
+            )
+
             crear_evento_cita(
                 actor=request.user,
                 cita=cita,
@@ -71,6 +85,104 @@ def agendar_cita(request):
         form = CitaForm()
     
     return render(request, 'citas/formulario.html', {'form': form, 'titulo': 'Agendar Cita'})
+
+@login_required
+def agendar_cita_propietario(request):
+    """Vista para que propietarios agenden citas para sus mascotas."""
+    # Verificar que el usuario es propietario y tiene registro
+    if request.user.rol != 'PROPIETARIO':
+        messages.error(request, 'Solo los propietarios pueden usar este formulario.')
+        return redirect('home')
+    
+    try:
+        propietario = request.user.propietario
+    except:
+        messages.error(request, 'No tienes un perfil de propietario asociado.')
+        return redirect('home')
+    
+    # Verificar que el propietario tiene mascotas
+    if not propietario.mascotas.exists():
+        messages.warning(request, 'Debes registrar al menos una mascota antes de agendar una cita.')
+        return redirect('mascotas:registrar', propietario_id=propietario.id)
+    
+    if request.method == 'POST':
+        form = CitaPropietarioForm(request.POST, propietario=propietario)
+        if form.is_valid():
+            cita = form.save(commit=False)
+            cita.propietario = propietario
+            cita.usuario_creador = request.user
+            
+            # Si no seleccionó veterinario, asignar uno disponible
+            if not cita.veterinario:
+                # Buscar veterinario con menos citas en esa fecha
+                veterinarios = Usuario.objects.filter(rol='VETERINARIO', activo=True)
+                if veterinarios.exists():
+                    cita.veterinario = veterinarios.first()  # Simplificado: asignar el primero
+                else:
+                    messages.error(request, 'No hay veterinarios disponibles. Contacta a la clínica.')
+                    return render(request, 'citas/formulario_propietario.html', {
+                        'form': form,
+                        'titulo': 'Agendar Cita'
+                    })
+            
+            cita.save()
+            
+            # Crear registro de pago pendiente automático
+            Pago.objects.create(
+                cita=cita,
+                propietario=propietario,
+                monto=cita.servicio.precio,
+                tipo_pago='PENDIENTE',
+                estado='PENDIENTE',
+                usuario_registro=request.user
+            )
+            
+            # Crear notificación para el veterinario asignado
+            Notificacion.objects.create(
+                usuario=cita.veterinario,
+                actor=request.user,
+                tipo='CONFIRMACION',
+                asunto=f'Nueva cita agendada - {cita.mascota.nombre}',
+                mensaje=f'{propietario.nombre} ha agendado una cita para {cita.mascota.nombre}.\n\n'
+                        f'Fecha: {cita.fecha.strftime("%d/%m/%Y")}\n'
+                        f'Hora: {cita.hora.strftime("%H:%M")}\n'
+                        f'Servicio: {cita.servicio.get_nombre_display()}\n'
+                        f'Motivo: {cita.observaciones}',
+                cita=cita,
+                canal_enviado='SISTEMA'
+            )
+            
+            # También notificar al propietario
+            Notificacion.objects.create(
+                usuario=request.user,
+                actor=request.user,
+                tipo='CONFIRMACION',
+                asunto='Cita agendada exitosamente',
+                mensaje=f'Tu cita para {cita.mascota.nombre} ha sido agendada.\n\n'
+                        f'Fecha: {cita.fecha.strftime("%d/%m/%Y")}\n'
+                        f'Hora: {cita.hora.strftime("%H:%M")}\n'
+                        f'Veterinario: Dr. {cita.veterinario.get_full_name()}\n'
+                        f'Servicio: {cita.servicio.get_nombre_display()}\n\n'
+                        f'Te enviaremos un recordatorio 24 horas antes.',
+                cita=cita,
+                canal_enviado='SISTEMA'
+            )
+            
+            messages.success(
+                request, 
+                f'¡Cita agendada exitosamente! Dr. {cita.veterinario.get_full_name()} '
+                f'te atenderá el {cita.fecha.strftime("%d/%m/%Y")} a las {cita.hora.strftime("%H:%M")}.'
+            )
+            return redirect('propietarios:detalle', pk=propietario.id)
+    else:
+        form = CitaPropietarioForm(propietario=propietario)
+    
+    return render(request, 'citas/formulario_propietario.html', {
+        'form': form,
+        'titulo': 'Agendar Cita para mi Mascota',
+        'propietario': propietario
+    })
+
 
 @login_required
 def detalle_cita(request, pk):

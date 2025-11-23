@@ -6797,3 +6797,1161 @@ INFO 2025-11-23 05:45:30,964 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_
 INFO 2025-11-23 05:45:33,762 autoreload Watching for file changes with StatReloader
 INFO 2025-11-23 05:45:34,173 autoreload Watching for file changes with StatReloader
 INFO 2025-11-23 05:45:37,290 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:03:36,236 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:03:36,293 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:03:36,372 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 06:03:36,378 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 06:03:36,411 basehttp - Broken pipe from ('127.0.0.1', 64285)
+INFO 2025-11-23 06:03:38,728 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:03:42,600 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:03:42,707 basehttp - Broken pipe from ('127.0.0.1', 64284)
+INFO 2025-11-23 06:03:43,721 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:04:51,850 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:04:51,906 basehttp - Broken pipe from ('127.0.0.1', 64291)
+INFO 2025-11-23 06:04:53,602 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:04:53,675 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 06:04:54,642 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:04:56,043 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:06:25,379 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:06:25,456 basehttp - Broken pipe from ('127.0.0.1', 64349)
+INFO 2025-11-23 06:06:26,333 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:06:27,479 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:06:28,768 basehttp "GET /citas/12/ HTTP/1.1" 200 7048
+INFO 2025-11-23 06:06:28,891 basehttp - Broken pipe from ('127.0.0.1', 64416)
+ERROR 2025-11-23 06:06:30,626 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:06:30,637 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202314
+WARNING 2025-11-23 06:06:30,729 log Not Found: /favicon.ico
+INFO 2025-11-23 06:06:30,730 basehttp - Broken pipe from ('127.0.0.1', 64422)
+INFO 2025-11-23 06:06:35,079 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+ERROR 2025-11-23 06:07:30,337 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:07:30,341 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202321
+WARNING 2025-11-23 06:07:30,421 log Not Found: /favicon.ico
+INFO 2025-11-23 06:07:30,422 basehttp - Broken pipe from ('127.0.0.1', 64424)
+ERROR 2025-11-23 06:08:12,575 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:08:12,581 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202321
+WARNING 2025-11-23 06:08:12,655 log Not Found: /favicon.ico
+INFO 2025-11-23 06:08:12,656 basehttp - Broken pipe from ('127.0.0.1', 64484)
+ERROR 2025-11-23 06:08:14,689 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:08:14,694 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202321
+WARNING 2025-11-23 06:08:15,901 log Not Found: /favicon.ico
+INFO 2025-11-23 06:08:15,903 basehttp - Broken pipe from ('127.0.0.1', 64487)
+INFO 2025-11-23 06:08:15,969 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 06:08:15,970 basehttp - Broken pipe from ('127.0.0.1', 64488)
+INFO 2025-11-23 06:08:17,824 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:08:18,506 basehttp "GET / HTTP/1.1" 200 5619
+ERROR 2025-11-23 06:08:20,824 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:08:20,830 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202305
+WARNING 2025-11-23 06:08:22,003 log Not Found: /favicon.ico
+INFO 2025-11-23 06:08:22,004 basehttp - Broken pipe from ('127.0.0.1', 64489)
+ERROR 2025-11-23 06:09:14,658 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:09:14,664 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202305
+WARNING 2025-11-23 06:09:14,760 log Not Found: /favicon.ico
+INFO 2025-11-23 06:09:14,761 basehttp - Broken pipe from ('127.0.0.1', 64547)
+ERROR 2025-11-23 06:09:26,218 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(15,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:09:26,221 basehttp "GET /propietarios/3/ HTTP/1.1" 500 202305
+WARNING 2025-11-23 06:09:27,602 log Not Found: /favicon.ico
+INFO 2025-11-23 06:09:27,603 basehttp - Broken pipe from ('127.0.0.1', 64565)
+INFO 2025-11-23 06:09:44,270 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:09:45,844 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:09:45,923 basehttp - Broken pipe from ('127.0.0.1', 64610)
+INFO 2025-11-23 06:09:47,021 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:09:47,561 basehttp "GET / HTTP/1.1" 200 5619
+ERROR 2025-11-23 06:09:49,196 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 123: 'endif', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2025-11-23 06:09:49,204 basehttp "GET /propietarios/3/ HTTP/1.1" 500 279261
+WARNING 2025-11-23 06:09:49,294 log Not Found: /favicon.ico
+INFO 2025-11-23 06:09:49,296 basehttp - Broken pipe from ('127.0.0.1', 64619)
+WARNING 2025-11-23 06:09:50,659 log Not Found: /favicon.ico
+INFO 2025-11-23 06:09:50,661 basehttp - Broken pipe from ('127.0.0.1', 64625)
+INFO 2025-11-23 06:10:18,256 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:10:20,437 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:10:20,492 basehttp - Broken pipe from ('127.0.0.1', 64716)
+INFO 2025-11-23 06:10:20,495 basehttp - Broken pipe from ('127.0.0.1', 64719)
+INFO 2025-11-23 06:10:20,497 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 06:10:20,498 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 06:10:20,671 basehttp - Broken pipe from ('127.0.0.1', 64720)
+INFO 2025-11-23 06:10:24,896 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:10:24,986 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 06:10:28,143 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:10:28,199 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 06:10:28,205 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 06:10:28,205 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 06:10:33,346 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:10:33,469 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:10:37,628 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:10:37,659 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:10:37,727 basehttp - Broken pipe from ('127.0.0.1', 64740)
+ERROR 2025-11-23 06:10:39,661 log Internal Server Error: /propietarios/3/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py", line 74, in detalle_propietario
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 123: 'endif', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2025-11-23 06:10:39,673 basehttp "GET /propietarios/3/ HTTP/1.1" 500 273956
+WARNING 2025-11-23 06:10:39,803 log Not Found: /favicon.ico
+INFO 2025-11-23 06:10:39,808 basehttp - Broken pipe from ('127.0.0.1', 64741)
+INFO 2025-11-23 06:13:02,350 basehttp "GET /propietarios/3/ HTTP/1.1" 200 12409
+ERROR 2025-11-23 06:13:07,275 log Internal Server Error: /citas/4/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py", line 80, in detalle_cita
+    return render(request, 'citas/detalle.html', {
+        'cita': cita,
+        'necesita_pago': necesita_pago
+    })
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'registrar' with arguments '(4,)' not found. 1 pattern(s) tried: ['pagos/registrar/\\Z']
+ERROR 2025-11-23 06:13:07,281 basehttp "GET /citas/4/ HTTP/1.1" 500 186173
+INFO 2025-11-23 06:13:58,515 basehttp "GET /pagos/registrar/cita/15/ HTTP/1.1" 200 10422
+INFO 2025-11-23 06:13:58,631 basehttp - Broken pipe from ('127.0.0.1', 65029)
+INFO 2025-11-23 06:14:02,903 basehttp "POST /pagos/registrar/cita/15/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:14:02,984 basehttp "GET /pagos/6/ HTTP/1.1" 200 7642
+INFO 2025-11-23 06:14:04,909 basehttp "GET /propietarios/3/ HTTP/1.1" 200 11251
+INFO 2025-11-23 06:14:07,324 basehttp "GET /mascotas/registrar/3/ HTTP/1.1" 200 8937
+INFO 2025-11-23 06:14:09,203 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:14:22,589 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:14:22,598 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:16:14,401 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:16:14,437 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:16:14,562 basehttp - Broken pipe from ('127.0.0.1', 65193)
+INFO 2025-11-23 06:16:16,876 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:16:18,538 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:16:22,270 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 06:16:23,516 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:16:24,889 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:16:26,696 basehttp "GET /propietarios/3/ HTTP/1.1" 200 11251
+INFO 2025-11-23 06:16:28,490 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:16:29,819 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 06:16:31,260 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:16:32,619 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:16:33,529 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:16:43,315 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\forms.py changed, reloading.
+INFO 2025-11-23 06:16:43,467 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\forms.py changed, reloading.
+INFO 2025-11-23 06:16:44,448 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:16:44,662 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:16:58,539 basehttp "GET /propietarios/3/ HTTP/1.1" 200 11251
+INFO 2025-11-23 06:17:06,302 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:17:13,387 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:17:14,146 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:17:14,655 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:17:15,099 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:17:17,098 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:17:18,293 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:17:20,438 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:17:22,395 basehttp "GET /propietarios/3/ HTTP/1.1" 200 11251
+INFO 2025-11-23 06:17:22,457 basehttp - Broken pipe from ('127.0.0.1', 49234)
+INFO 2025-11-23 06:17:32,137 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:17:33,946 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:17:34,003 basehttp - Broken pipe from ('127.0.0.1', 49268)
+INFO 2025-11-23 06:17:36,310 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 06:17:40,525 basehttp "GET /historiales/5/ HTTP/1.1" 200 8022
+INFO 2025-11-23 06:17:40,626 basehttp - Broken pipe from ('127.0.0.1', 49280)
+INFO 2025-11-23 06:17:42,624 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 06:17:43,740 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:17:43,823 basehttp - Broken pipe from ('127.0.0.1', 49301)
+INFO 2025-11-23 06:17:57,782 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:17:58,426 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:17:58,806 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:17:59,466 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:38,181 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:38,927 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:39,075 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:39,595 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:50,647 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:51,004 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:51,628 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:51,869 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:53,737 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:20:53,795 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 06:20:53,804 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 06:20:53,861 basehttp - Broken pipe from ('127.0.0.1', 49973)
+INFO 2025-11-23 06:20:54,136 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:54,151 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\urls.py changed, reloading.
+INFO 2025-11-23 06:20:55,097 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:20:55,140 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:21:43,843 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:21:43,899 basehttp - Broken pipe from ('127.0.0.1', 50234)
+INFO 2025-11-23 06:21:44,507 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:21:44,915 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:21:44,976 basehttp - Broken pipe from ('127.0.0.1', 50237)
+INFO 2025-11-23 06:21:45,090 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:21:45,294 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:21:46,440 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 06:21:50,224 basehttp "GET /propietarios/3/ HTTP/1.1" 200 13101
+INFO 2025-11-23 06:21:52,542 basehttp "GET /citas/agendar/propietario/ HTTP/1.1" 200 11516
+INFO 2025-11-23 06:21:52,642 basehttp - Broken pipe from ('127.0.0.1', 50238)
+INFO 2025-11-23 06:22:21,655 basehttp "POST /citas/agendar/propietario/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:21,702 basehttp "GET /propietarios/3/ HTTP/1.1" 200 13606
+INFO 2025-11-23 06:22:21,805 basehttp - Broken pipe from ('127.0.0.1', 50326)
+INFO 2025-11-23 06:22:23,609 basehttp "GET /notificaciones/ HTTP/1.1" 200 9261
+WARNING 2025-11-23 06:22:23,734 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 06:22:23,735 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+INFO 2025-11-23 06:22:23,744 basehttp - Broken pipe from ('127.0.0.1', 50327)
+INFO 2025-11-23 06:22:24,777 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:24,808 basehttp "GET /notificaciones/ HTTP/1.1" 200 9075
+WARNING 2025-11-23 06:22:24,901 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 06:22:24,902 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+WARNING 2025-11-23 06:22:26,175 log Not Found: /favicon.ico
+INFO 2025-11-23 06:22:26,177 basehttp - Broken pipe from ('127.0.0.1', 50338)
+INFO 2025-11-23 06:22:30,898 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6280
+INFO 2025-11-23 06:22:30,997 basehttp - Broken pipe from ('127.0.0.1', 50348)
+INFO 2025-11-23 06:22:33,339 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:33,360 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:22:36,637 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:36,667 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 06:22:41,099 basehttp "GET /citas/ HTTP/1.1" 200 10523
+INFO 2025-11-23 06:22:41,293 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 3090
+INFO 2025-11-23 06:22:48,342 basehttp "GET /citas/16/ HTTP/1.1" 200 9239
+INFO 2025-11-23 06:22:48,435 basehttp - Broken pipe from ('127.0.0.1', 50351)
+INFO 2025-11-23 06:22:50,847 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:50,854 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:22:55,507 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:22:55,537 basehttp "GET / HTTP/1.1" 200 7540
+INFO 2025-11-23 06:23:02,102 basehttp "GET /notificaciones/veterinario/ HTTP/1.1" 200 7505
+INFO 2025-11-23 06:23:02,919 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:23:02,958 basehttp "GET /notificaciones/veterinario/ HTTP/1.1" 200 7191
+INFO 2025-11-23 06:23:04,777 basehttp "GET / HTTP/1.1" 200 7414
+INFO 2025-11-23 06:23:12,230 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:23:12,238 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:23:16,830 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:23:16,863 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:23:19,361 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+WARNING 2025-11-23 06:23:21,197 log Not Found: /favicon.ico
+INFO 2025-11-23 06:23:21,199 basehttp - Broken pipe from ('127.0.0.1', 50431)
+INFO 2025-11-23 06:24:24,232 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:24,295 basehttp - Broken pipe from ('127.0.0.1', 50669)
+INFO 2025-11-23 06:24:24,763 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:25,036 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:25,333 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:25,391 basehttp - Broken pipe from ('127.0.0.1', 50672)
+INFO 2025-11-23 06:24:25,609 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:35,653 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:36,104 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:43,147 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:43,634 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:47,347 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:47,667 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:47,989 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:48,133 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:48,302 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:48,643 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:48,957 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:49,224 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:49,679 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:49,972 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:50,271 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:50,471 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:50,670 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:51,181 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:51,383 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:51,998 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:52,308 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:52,458 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:58,409 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:58,801 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:58,985 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:59,136 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:59,297 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:59,435 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:24:59,596 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:25:00,035 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:25:00,356 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 06:25:26,766 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:25:33,066 basehttp "GET /mascotas/registrar/3/ HTTP/1.1" 200 8937
+WARNING 2025-11-23 06:25:34,379 log Not Found: /favicon.ico
+INFO 2025-11-23 06:25:34,380 basehttp - Broken pipe from ('127.0.0.1', 50676)
+INFO 2025-11-23 06:25:35,093 basehttp "GET /citas/agendar/propietario/ HTTP/1.1" 200 11516
+INFO 2025-11-23 06:25:37,225 basehttp "GET /mascotas/registrar/3/ HTTP/1.1" 200 8937
+INFO 2025-11-23 06:26:01,203 basehttp "POST /mascotas/registrar/3/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:26:01,245 basehttp "GET /propietarios/3/ HTTP/1.1" 200 14909
+WARNING 2025-11-23 06:26:05,117 log Not Found: /historiales/mascota/8//
+WARNING 2025-11-23 06:26:05,118 basehttp "GET /historiales/mascota/8// HTTP/1.1" 404 5291
+WARNING 2025-11-23 06:26:53,657 log Not Found: /historiales/mascota/8//
+WARNING 2025-11-23 06:26:53,657 basehttp "GET /historiales/mascota/8// HTTP/1.1" 404 5291
+WARNING 2025-11-23 06:26:53,738 log Not Found: /favicon.ico
+INFO 2025-11-23 06:26:53,739 basehttp - Broken pipe from ('127.0.0.1', 50853)
+WARNING 2025-11-23 06:26:55,516 log Not Found: /historiales/mascota/8//
+WARNING 2025-11-23 06:26:55,517 basehttp "GET /historiales/mascota/8// HTTP/1.1" 404 5291
+WARNING 2025-11-23 06:26:57,392 log Not Found: /historiales/mascota/5//
+WARNING 2025-11-23 06:26:57,393 basehttp "GET /historiales/mascota/5// HTTP/1.1" 404 5291
+WARNING 2025-11-23 06:28:25,015 log Not Found: /historiales/mascota/4//
+WARNING 2025-11-23 06:28:25,015 basehttp "GET /historiales/mascota/4// HTTP/1.1" 404 5291
+WARNING 2025-11-23 06:28:25,124 log Not Found: /favicon.ico
+INFO 2025-11-23 06:28:25,125 basehttp - Broken pipe from ('127.0.0.1', 51050)
+WARNING 2025-11-23 06:28:26,400 log Not Found: /historiales/mascota/4//
+WARNING 2025-11-23 06:28:26,401 basehttp "GET /historiales/mascota/4// HTTP/1.1" 404 5291
+INFO 2025-11-23 06:28:26,975 basehttp - Broken pipe from ('127.0.0.1', 51306)
+INFO 2025-11-23 06:28:29,970 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:28:31,318 basehttp "GET /propietarios/3/ HTTP/1.1" 200 14582
+INFO 2025-11-23 06:29:17,384 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6946
+INFO 2025-11-23 06:29:22,404 basehttp "GET /historiales/5/ HTTP/1.1" 200 8022
+INFO 2025-11-23 06:29:25,561 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6946
+INFO 2025-11-23 06:32:24,357 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\models.py changed, reloading.
+INFO 2025-11-23 06:32:24,526 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\models.py changed, reloading.
+INFO 2025-11-23 06:32:25,526 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:32:25,608 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:32:38,071 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:32:38,109 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:32:39,560 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:32:39,602 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:32:40,974 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6946
+INFO 2025-11-23 06:32:41,097 basehttp - Broken pipe from ('127.0.0.1', 51817)
+INFO 2025-11-23 06:32:43,633 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:32:43,729 basehttp - Broken pipe from ('127.0.0.1', 51818)
+INFO 2025-11-23 06:32:45,812 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:32:51,701 basehttp "GET /propietarios/3/ HTTP/1.1" 200 14582
+WARNING 2025-11-23 06:32:54,235 log Not Found: /favicon.ico
+INFO 2025-11-23 06:32:54,236 basehttp - Broken pipe from ('127.0.0.1', 51819)
+INFO 2025-11-23 06:33:03,453 basehttp "GET /propietarios/3/ HTTP/1.1" 200 14582
+WARNING 2025-11-23 06:33:06,283 log Not Found: /citas/4//
+WARNING 2025-11-23 06:33:06,284 basehttp "GET /citas/4// HTTP/1.1" 404 6270
+WARNING 2025-11-23 06:33:09,398 log Not Found: /citas/4//
+WARNING 2025-11-23 06:33:09,398 basehttp "GET /citas/4// HTTP/1.1" 404 6270
+WARNING 2025-11-23 06:33:13,592 log Not Found: /pagos/registrar/cita/4//
+WARNING 2025-11-23 06:33:13,593 basehttp "GET /pagos/registrar/cita/4// HTTP/1.1" 404 5211
+INFO 2025-11-23 06:33:18,528 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:33:18,707 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 06:33:19,715 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:33:19,772 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:33:22,378 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:33:22,410 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:33:25,786 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:33:25,818 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 06:33:25,895 basehttp - Broken pipe from ('127.0.0.1', 51964)
+INFO 2025-11-23 06:33:27,339 basehttp "GET /admin/ HTTP/1.1" 200 23674
+INFO 2025-11-23 06:33:27,418 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:27,418 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-11-23 06:33:27,419 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:27,419 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-11-23 06:33:27,421 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:27,427 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-11-23 06:33:27,427 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+WARNING 2025-11-23 06:33:27,510 log Not Found: /favicon.ico
+INFO 2025-11-23 06:33:27,511 basehttp - Broken pipe from ('127.0.0.1', 51989)
+INFO 2025-11-23 06:33:30,635 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 30057
+INFO 2025-11-23 06:33:30,701 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-11-23 06:33:30,728 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-11-23 06:33:30,728 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-11-23 06:33:30,772 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 06:33:30,924 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,924 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,925 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,925 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,925 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,926 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:30,928 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-11-23 06:33:36,559 basehttp "GET /admin/autenticacion/usuario/3/change/ HTTP/1.1" 200 46531
+INFO 2025-11-23 06:33:36,619 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-11-23 06:33:36,632 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 06:33:36,632 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-23 06:33:36,633 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-23 06:33:36,643 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-11-23 06:33:36,644 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-11-23 06:33:36,645 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-11-23 06:33:36,651 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+INFO 2025-11-23 06:33:36,657 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+WARNING 2025-11-23 06:33:36,795 log Not Found: /favicon.ico
+INFO 2025-11-23 06:33:36,797 basehttp - Broken pipe from ('127.0.0.1', 52000)
+INFO 2025-11-23 06:33:46,622 basehttp "POST /admin/autenticacion/usuario/3/change/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:33:46,674 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 30272
+INFO 2025-11-23 06:33:46,758 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+WARNING 2025-11-23 06:33:46,907 log Not Found: /favicon.ico
+INFO 2025-11-23 06:33:46,909 basehttp - Broken pipe from ('127.0.0.1', 51991)
+INFO 2025-11-23 06:33:47,313 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 06:33:47,970 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 06:33:48,648 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:33:49,102 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:33:49,583 basehttp "GET /admin/autenticacion/usuario/2/change/ HTTP/1.1" 200 46593
+INFO 2025-11-23 06:33:49,709 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+WARNING 2025-11-23 06:33:49,789 log Not Found: /favicon.ico
+INFO 2025-11-23 06:33:49,790 basehttp - Broken pipe from ('127.0.0.1', 52063)
+INFO 2025-11-23 06:33:52,356 basehttp "POST /admin/autenticacion/usuario/2/change/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:33:52,424 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 30283
+INFO 2025-11-23 06:33:52,498 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 06:33:53,766 basehttp "GET /admin/autenticacion/usuario/8/change/ HTTP/1.1" 200 46527
+INFO 2025-11-23 06:33:53,873 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+WARNING 2025-11-23 06:33:53,959 log Not Found: /favicon.ico
+INFO 2025-11-23 06:33:53,960 basehttp - Broken pipe from ('127.0.0.1', 52058)
+INFO 2025-11-23 06:33:57,543 basehttp "POST /admin/autenticacion/usuario/8/change/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:33:57,588 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 30268
+INFO 2025-11-23 06:33:57,657 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 06:33:59,896 basehttp "GET /admin/autenticacion/usuario/9/change/ HTTP/1.1" 200 46533
+INFO 2025-11-23 06:33:59,976 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+WARNING 2025-11-23 06:34:00,054 log Not Found: /favicon.ico
+INFO 2025-11-23 06:34:00,056 basehttp - Broken pipe from ('127.0.0.1', 52083)
+INFO 2025-11-23 06:34:07,202 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py changed, reloading.
+INFO 2025-11-23 06:34:07,711 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py changed, reloading.
+INFO 2025-11-23 06:34:08,752 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:34:09,191 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:34:12,577 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 06:34:12,644 basehttp - Broken pipe from ('127.0.0.1', 52167)
+INFO 2025-11-23 06:34:14,267 basehttp "GET /pagos/ HTTP/1.1" 200 11916
+INFO 2025-11-23 06:34:15,582 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:34:15,610 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4930
+INFO 2025-11-23 06:34:15,696 basehttp - Broken pipe from ('127.0.0.1', 52171)
+INFO 2025-11-23 06:34:21,263 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:34:21,296 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:34:21,420 basehttp - Broken pipe from ('127.0.0.1', 52195)
+INFO 2025-11-23 06:34:23,175 basehttp "GET /propietarios/3/ HTTP/1.1" 200 12064
+INFO 2025-11-23 06:34:27,356 basehttp "GET /historiales/mis/ HTTP/1.1" 200 8876
+INFO 2025-11-23 06:34:29,182 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6940
+INFO 2025-11-23 06:34:29,324 basehttp - Broken pipe from ('127.0.0.1', 52201)
+INFO 2025-11-23 06:34:31,415 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 06:34:33,687 basehttp "GET /historiales/mis/ HTTP/1.1" 200 8876
+INFO 2025-11-23 06:34:33,753 basehttp - Broken pipe from ('127.0.0.1', 52226)
+INFO 2025-11-23 06:34:35,269 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:34:39,630 basehttp "GET /propietarios/3/ HTTP/1.1" 200 12064
+INFO 2025-11-23 06:34:41,680 basehttp "GET /historiales/mascota/5/ HTTP/1.1" 200 5194
+INFO 2025-11-23 06:34:41,745 basehttp - Broken pipe from ('127.0.0.1', 52235)
+INFO 2025-11-23 06:34:46,231 basehttp "GET /notificaciones/ HTTP/1.1" 200 9075
+INFO 2025-11-23 06:34:46,328 basehttp - Broken pipe from ('127.0.0.1', 52263)
+WARNING 2025-11-23 06:34:46,339 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 06:34:46,339 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+INFO 2025-11-23 06:34:47,488 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 06:34:47,520 basehttp "GET /notificaciones/ HTTP/1.1" 200 9075
+WARNING 2025-11-23 06:34:47,629 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 06:34:47,630 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+INFO 2025-11-23 06:34:48,328 basehttp "GET / HTTP/1.1" 200 9167
+INFO 2025-11-23 06:35:00,813 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 06:35:01,383 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 06:35:01,648 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 06:35:02,490 autoreload Watching for file changes with StatReloader

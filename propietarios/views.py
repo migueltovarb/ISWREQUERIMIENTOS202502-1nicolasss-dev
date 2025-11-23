@@ -65,15 +65,20 @@ def detalle_propietario(request, pk):
     if request.user.rol == 'PROPIETARIO' and propietario.usuario_id != request.user.id:
         return redirect('home')
     
-    # Obtener citas completadas pendientes de pago
-    citas_pendientes_pago = propietario.citas.filter(
-        estado='COMPLETADA',
-        pagado=False
-    ).select_related('mascota', 'servicio').order_by('-fecha', '-hora')
+    # Obtener pagos pendientes (incluye citas programadas y completadas)
+    pagos_pendientes = propietario.pagos.filter(
+        estado='PENDIENTE'
+    ).select_related('cita', 'cita__mascota', 'cita__servicio').order_by('-fecha_pago')
+
+    # Obtener historial de pagos completados
+    pagos_completados = propietario.pagos.filter(
+        estado='COMPLETADO'
+    ).select_related('cita', 'cita__mascota', 'cita__servicio').order_by('-fecha_pago')
     
     return render(request, 'propietarios/detalle.html', {
         'propietario': propietario,
-        'citas_pendientes_pago': citas_pendientes_pago
+        'pagos_pendientes': pagos_pendientes,
+        'pagos_completados': pagos_completados
     })
 
 @login_required

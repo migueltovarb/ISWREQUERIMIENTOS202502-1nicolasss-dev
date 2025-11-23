@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.calendario_citas, name='calendario'),
     path('api/eventos/', views.api_citas, name='api_eventos'),
     path('agendar/', views.agendar_cita, name='agendar'),
+    path('agendar/propietario/', views.agendar_cita_propietario, name='agendar_propietario'),
     path('<int:pk>/', views.detalle_cita, name='detalle'),
     path('<int:pk>/cancelar/', views.cancelar_cita, name='cancelar'),
     path('<int:pk>/confirmar/', views.confirmar_cita, name='confirmar'),

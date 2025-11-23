@@ -12,25 +12,117 @@
 
 {% if user.rol == 'PROPIETARIO' %}
 {# Dashboard para PROPIETARIOS #}
+
+<!-- Acciones Principales -->
 <div class="row mt-4">
-    <div class="col-md-6 mb-3">
-        <div class="card shadow-sm border-0 text-white bg-primary-mydog">
-            <div class="card-body text-center">
-                <i class="bi bi-heart-pulse fs-1 mb-2"></i>
-                <h3 class="font-titulo">Mis Mascotas</h3>
-                <p>Consulta el historial médico de tus mascotas</p>
-                <a href="{% url 'historiales:mis_mascotas' %}" class="btn btn-light btn-sm mt-2">Ver Mascotas</a>
+    <div class="col-12 mb-3">
+        <h4 class="font-titulo text-muted">Acciones Rápidas</h4>
+    </div>
+    
+    <!-- Agendar Cita -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+            <div class="card-body text-white text-center py-5">
+                <i class="bi bi-calendar-plus" style="font-size: 4rem;"></i>
+                <h2 class="font-titulo mt-3 mb-3">Agendar Cita</h2>
+                <p class="mb-4">Programa una consulta o vacunación para tus mascotas</p>
+                <a href="{% url 'citas:agendar_propietario' %}" class="btn btn-light btn-lg px-5">
+                    <i class="bi bi-calendar-check"></i> Agendar Ahora
+                </a>
             </div>
         </div>
     </div>
     
-    <div class="col-md-6 mb-3">
-        <div class="card shadow-sm border-0">
+    <!-- Nueva Mascota -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow border-0 h-100" style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);">
+            <div class="card-body text-white text-center py-5">
+                <i class="bi bi-plus-circle" style="font-size: 4rem;"></i>
+                <h2 class="font-titulo mt-3 mb-3">Registrar Mascota</h2>
+                <p class="mb-4">Agrega una nueva mascota a tu perfil</p>
+                {% if user.propietario %}
+                <a href="{% url 'mascotas:registrar' user.propietario.id %}" class="btn btn-light btn-lg px-5">
+                    <i class="bi bi-plus-lg"></i> Registrar Mascota
+                </a>
+                {% else %}
+                <a href="{% url 'propietarios:lista' %}" class="btn btn-light btn-lg px-5">
+                    <i class="bi bi-plus-lg"></i> Registrar Mascota
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Información y Acceso Rápido -->
+<div class="row mt-2">
+    <!-- Mis Mascotas -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-heart-pulse fs-1 mb-2 text-primary-mydog"></i>
+                <h4 class="font-titulo">Mis Mascotas</h4>
+                <p class="text-muted">Consulta el historial médico</p>
+                {% if user.propietario %}
+                <a href="{% url 'propietarios:detalle' user.propietario.id %}" class="btn btn-outline-primary btn-sm mt-2">
+                    <i class="bi bi-eye"></i> Ver Mascotas
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notificaciones -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm border-0 h-100">
             <div class="card-body text-center">
                 <i class="bi bi-bell fs-1 mb-2 text-primary-mydog"></i>
-                <h3 class="font-titulo">Notificaciones</h3>
-                <p>Revisa tus recordatorios y mensajes</p>
-                <a href="{% url 'notificaciones:lista' %}" class="btn btn-outline-primary btn-sm mt-2">Ver Notificaciones</a>
+                <h4 class="font-titulo">Notificaciones</h4>
+                <p class="text-muted">Recordatorios y mensajes</p>
+                <a href="{% url 'notificaciones:lista' %}" class="btn btn-outline-primary btn-sm mt-2">
+                    <i class="bi bi-envelope"></i> Ver Notificaciones
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mi Perfil -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-person-circle fs-1 mb-2 text-primary-mydog"></i>
+                <h4 class="font-titulo">Mi Perfil</h4>
+                <p class="text-muted">Información personal</p>
+                {% if user.propietario %}
+                <a href="{% url 'propietarios:detalle' user.propietario.id %}" class="btn btn-outline-primary btn-sm mt-2">
+                    <i class="bi bi-pencil"></i> Ver Perfil
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Información Útil -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm border-0 bg-light">
+            <div class="card-body">
+                <h5 class="font-titulo mb-3"><i class="bi bi-info-circle"></i> Información Importante</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Horario de Atención</h6>
+                        <p class="small mb-0">Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Cancelaciones</h6>
+                        <p class="small mb-0">Con mínimo 6 horas de anticipación</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Recordatorios</h6>
+                        <p class="small mb-0">Recibirás notificación 24h antes de tu cita</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
