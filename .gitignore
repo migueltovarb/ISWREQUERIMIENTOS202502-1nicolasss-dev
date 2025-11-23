@@ -1,32 +1,6 @@
 # Ignorar la wiki (es un repositorio Git separado)
 ISWREQUERIMIENTOS202502-1nicolasss-dev.wiki/
 
-# Entornos virtuales de Python
-venv/
-env/
-ENV/
-.venv
-
-# Archivos de Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# Django
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-/media
-/staticfiles
-/static
-
-# Archivos del IDE
-.vscode/
-.idea/
-*.swp
 *.swo
 *~
 
