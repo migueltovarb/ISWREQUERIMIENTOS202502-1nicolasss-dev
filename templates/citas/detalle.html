@@ -79,7 +79,7 @@
                         {% endif %}
 
                         {% if necesita_pago %}
-                            <a href="{% url 'pagos:registrar' cita.pk %}" class="btn btn-success">
+                            <a href="{% url 'pagos:registrar_cita' cita.pk %}" class="btn btn-success">
                                 <i class="bi bi-credit-card"></i> Pagar Ahora
                             </a>
                         {% elif cita.pagado and cita.pagos.exists %}
