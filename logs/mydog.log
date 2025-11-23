@@ -3609,3 +3609,384 @@ INFO 2025-11-23 01:24:48,161 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200
 INFO 2025-11-23 01:24:48,903 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8594
 INFO 2025-11-23 01:24:50,317 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7611
 INFO 2025-11-23 01:24:51,321 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8594
+INFO 2025-11-23 01:26:57,460 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:26:57,468 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 01:26:57,528 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:26:57,529 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:27:00,726 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:27:00,750 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:27:00,798 basehttp - Broken pipe from ('127.0.0.1', 51575)
+INFO 2025-11-23 01:27:12,911 basehttp "GET /pagos/ HTTP/1.1" 200 10261
+INFO 2025-11-23 01:27:15,625 basehttp "GET /pagos/registrar/ HTTP/1.1" 200 10466
+INFO 2025-11-23 01:27:15,688 basehttp - Broken pipe from ('127.0.0.1', 51574)
+INFO 2025-11-23 01:27:23,720 basehttp "GET /pagos/ HTTP/1.1" 200 10261
+INFO 2025-11-23 01:27:25,387 basehttp "GET /notificaciones/ HTTP/1.1" 200 6737
+INFO 2025-11-23 01:27:25,438 basehttp - Broken pipe from ('127.0.0.1', 51604)
+INFO 2025-11-23 01:27:26,272 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7812
+INFO 2025-11-23 01:27:28,261 basehttp "GET /citas/ HTTP/1.1" 200 10426
+INFO 2025-11-23 01:27:28,373 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 01:27:29,936 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:27:29,944 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 01:27:45,619 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:27:45,642 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:27:45,699 basehttp - Broken pipe from ('127.0.0.1', 51610)
+INFO 2025-11-23 01:27:46,742 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:27:49,442 basehttp "GET /notificaciones/ HTTP/1.1" 200 6737
+INFO 2025-11-23 01:27:51,358 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:27:51,364 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 01:27:51,409 basehttp - Broken pipe from ('127.0.0.1', 51653)
+INFO 2025-11-23 01:28:41,024 basehttp "GET /autenticacion/recuperar-password/ HTTP/1.1" 200 4125
+WARNING 2025-11-23 01:28:43,252 log Not Found: /favicon.ico
+INFO 2025-11-23 01:28:43,253 basehttp - Broken pipe from ('127.0.0.1', 51784)
+INFO 2025-11-23 01:28:43,332 basehttp - Broken pipe from ('127.0.0.1', 51786)
+INFO 2025-11-23 01:28:49,841 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:28:49,867 basehttp "GET / HTTP/1.1" 200 5516
+INFO 2025-11-23 01:28:49,913 basehttp - Broken pipe from ('127.0.0.1', 51796)
+INFO 2025-11-23 01:32:11,559 basehttp "GET /notificaciones/ HTTP/1.1" 200 4869
+INFO 2025-11-23 01:32:11,606 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:32:11,607 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:32:12,379 basehttp "GET /notificaciones/ HTTP/1.1" 200 4869
+INFO 2025-11-23 01:32:12,802 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7350
+INFO 2025-11-23 01:32:12,861 basehttp - Broken pipe from ('127.0.0.1', 52100)
+INFO 2025-11-23 01:32:15,490 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:32:15,498 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 01:32:19,783 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:32:19,816 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:32:19,869 basehttp - Broken pipe from ('127.0.0.1', 52098)
+INFO 2025-11-23 01:32:22,905 basehttp "GET /citas/ HTTP/1.1" 200 10426
+INFO 2025-11-23 01:32:23,014 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 01:32:32,797 basehttp "GET /citas/api/eventos/?start=2025-12-01T00%3A00%3A00-05%3A00&end=2026-01-12T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:33,474 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 01:32:33,986 basehttp "GET /citas/api/eventos/?start=2025-09-29T00%3A00%3A00-05%3A00&end=2025-11-10T00%3A00%3A00-05%3A00 HTTP/1.1" 200 213
+INFO 2025-11-23 01:32:34,322 basehttp "GET /citas/api/eventos/?start=2025-09-01T00%3A00%3A00-05%3A00&end=2025-10-13T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:34,654 basehttp "GET /citas/api/eventos/?start=2025-07-28T00%3A00%3A00-05%3A00&end=2025-09-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:35,058 basehttp "GET /citas/api/eventos/?start=2025-06-30T00%3A00%3A00-05%3A00&end=2025-08-11T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:35,366 basehttp "GET /citas/api/eventos/?start=2025-07-28T00%3A00%3A00-05%3A00&end=2025-09-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:35,670 basehttp "GET /citas/api/eventos/?start=2025-09-01T00%3A00%3A00-05%3A00&end=2025-10-13T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:32:36,157 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 01:32:55,808 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\models.py changed, reloading.
+INFO 2025-11-23 01:32:56,843 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 01:33:03,827 basehttp "GET /citas/api/eventos/?start=2025-12-01T00%3A00%3A00-05%3A00&end=2026-01-12T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:04,144 basehttp "GET /citas/api/eventos/?start=2025-12-29T00%3A00%3A00-05%3A00&end=2026-02-09T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:04,348 basehttp "GET /citas/api/eventos/?start=2026-01-26T00%3A00%3A00-05%3A00&end=2026-03-09T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:04,659 basehttp "GET /citas/api/eventos/?start=2026-02-23T00%3A00%3A00-05%3A00&end=2026-04-06T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:04,988 basehttp "GET /citas/api/eventos/?start=2026-03-30T00%3A00%3A00-05%3A00&end=2026-05-11T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:05,120 basehttp "GET /citas/api/eventos/?start=2026-04-27T00%3A00%3A00-05%3A00&end=2026-06-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:05,277 basehttp "GET /citas/api/eventos/?start=2026-06-01T00%3A00%3A00-05%3A00&end=2026-07-13T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:05,434 basehttp "GET /citas/api/eventos/?start=2026-06-29T00%3A00%3A00-05%3A00&end=2026-08-10T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,153 basehttp "GET /citas/api/eventos/?start=2026-07-27T00%3A00%3A00-05%3A00&end=2026-09-07T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,315 basehttp "GET /citas/api/eventos/?start=2026-08-31T00%3A00%3A00-05%3A00&end=2026-10-12T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,469 basehttp "GET /citas/api/eventos/?start=2026-09-28T00%3A00%3A00-05%3A00&end=2026-11-09T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,615 basehttp "GET /citas/api/eventos/?start=2026-10-26T00%3A00%3A00-05%3A00&end=2026-12-07T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,746 basehttp "GET /citas/api/eventos/?start=2026-11-30T00%3A00%3A00-05%3A00&end=2027-01-11T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:06,904 basehttp "GET /citas/api/eventos/?start=2026-12-28T00%3A00%3A00-05%3A00&end=2027-02-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:07,054 basehttp "GET /citas/api/eventos/?start=2027-02-01T00%3A00%3A00-05%3A00&end=2027-03-15T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:07,209 basehttp "GET /citas/api/eventos/?start=2027-03-01T00%3A00%3A00-05%3A00&end=2027-04-12T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:07,355 basehttp "GET /citas/api/eventos/?start=2027-03-29T00%3A00%3A00-05%3A00&end=2027-05-10T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:07,749 basehttp "GET /citas/api/eventos/?start=2027-03-01T00%3A00%3A00-05%3A00&end=2027-04-12T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:07,943 basehttp "GET /citas/api/eventos/?start=2027-02-01T00%3A00%3A00-05%3A00&end=2027-03-15T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:08,093 basehttp "GET /citas/api/eventos/?start=2026-12-28T00%3A00%3A00-05%3A00&end=2027-02-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2
+INFO 2025-11-23 01:33:08,808 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 01:33:12,467 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\views.py changed, reloading.
+INFO 2025-11-23 01:33:13,080 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 01:33:22,290 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\urls.py changed, reloading.
+INFO 2025-11-23 01:33:22,995 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 01:33:34,391 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:33:34,442 basehttp - Broken pipe from ('127.0.0.1', 52232)
+INFO 2025-11-23 01:33:34,970 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:33:35,931 basehttp "GET /propietarios/ HTTP/1.1" 200 10242
+INFO 2025-11-23 01:33:35,979 basehttp - Broken pipe from ('127.0.0.1', 52245)
+INFO 2025-11-23 01:33:49,373 basehttp "GET /propietarios/?q= HTTP/1.1" 200 10242
+INFO 2025-11-23 01:33:50,434 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7812
+INFO 2025-11-23 01:33:50,498 basehttp - Broken pipe from ('127.0.0.1', 52272)
+INFO 2025-11-23 01:33:52,943 basehttp "GET /pagos/ HTTP/1.1" 200 10261
+INFO 2025-11-23 01:33:54,194 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7812
+INFO 2025-11-23 01:33:58,882 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 01:33:59,747 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:02:47,740 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:02:51,877 basehttp "GET /historiales/mascota/1/ HTTP/1.1" 200 7807
+INFO 2025-11-23 02:02:51,922 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 02:02:51,924 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 02:02:52,212 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 02:02:52,213 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 02:02:54,253 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 7102
+INFO 2025-11-23 02:02:54,834 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 7102
+INFO 2025-11-23 02:02:58,660 basehttp "GET /notificaciones/admin/?tipo=&usuario= HTTP/1.1" 200 7102
+INFO 2025-11-23 02:03:01,646 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:01,670 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:03:04,793 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:04,824 basehttp "GET / HTTP/1.1" 200 5586
+INFO 2025-11-23 02:03:06,453 basehttp "GET /notificaciones/ HTTP/1.1" 200 6084
+WARNING 2025-11-23 02:03:06,530 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 02:03:06,530 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+INFO 2025-11-23 02:03:07,910 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:07,916 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:03:18,034 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:18,069 basehttp "GET / HTTP/1.1" 200 7381
+INFO 2025-11-23 02:03:22,377 basehttp "GET /citas/ HTTP/1.1" 200 9744
+INFO 2025-11-23 02:03:22,508 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2073
+INFO 2025-11-23 02:03:25,731 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 02:03:26,907 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:03:27,572 basehttp "GET /citas/agendar/ HTTP/1.1" 200 11509
+INFO 2025-11-23 02:03:31,356 basehttp "GET /citas/ajax/cargar-mascotas/?propietario_id=3 HTTP/1.1" 200 58
+INFO 2025-11-23 02:03:35,327 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\views.py changed, reloading.
+INFO 2025-11-23 02:03:36,399 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:03:42,881 basehttp "POST /citas/agendar/ HTTP/1.1" 200 11790
+INFO 2025-11-23 02:03:43,878 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\urls.py changed, reloading.
+INFO 2025-11-23 02:03:45,000 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:03:50,527 basehttp "POST /citas/agendar/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:50,575 basehttp "GET /citas/ HTTP/1.1" 200 10054
+INFO 2025-11-23 02:03:50,713 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2273
+INFO 2025-11-23 02:03:53,251 basehttp "GET /notificaciones/veterinario/ HTTP/1.1" 200 5710
+INFO 2025-11-23 02:03:54,400 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:54,432 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:03:58,059 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:03:58,087 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 02:03:59,147 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 4639
+INFO 2025-11-23 02:04:01,188 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 02:04:07,273 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 4639
+INFO 2025-11-23 02:04:08,232 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 4639
+INFO 2025-11-23 02:04:09,228 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 4639
+INFO 2025-11-23 02:04:09,759 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 4639
+INFO 2025-11-23 02:04:10,353 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 02:04:12,077 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:04:12,094 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:04:17,530 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:04:17,574 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 02:04:19,322 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 7135
+INFO 2025-11-23 02:04:52,704 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 7135
+INFO 2025-11-23 02:05:28,600 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 7856
+INFO 2025-11-23 02:05:35,867 basehttp "GET /notificaciones/admin/?tipo=&usuario= HTTP/1.1" 200 7856
+INFO 2025-11-23 02:05:44,667 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:05:44,683 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:05:50,007 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:05:50,049 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:05:51,044 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:06:02,639 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:02,662 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:06:03,767 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:03,789 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:06:03,988 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:04,013 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:06:04,140 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:04,162 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:06:04,260 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:04,283 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:06:29,262 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:06:30,024 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:06:30,469 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:30,495 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:06:31,346 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:06:31,973 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:06:32,985 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:06:57,714 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:57,735 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:06:58,153 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:06:58,178 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+WARNING 2025-11-23 02:07:07,222 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:07:07,243 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:07:08,076 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:13,243 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:13,671 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:13,992 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:14,145 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:14,297 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:14,500 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:14,683 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:15,233 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:15,617 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:15,876 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:16,114 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:16,939 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:17,361 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:17,670 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:07:23,147 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:07:23,175 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:07:29,654 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:07:30,658 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:07:30,679 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:07:44,149 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+INFO 2025-11-23 02:07:45,026 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6225
+WARNING 2025-11-23 02:07:45,830 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:07:45,862 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:06,490 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:07,338 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:07,361 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:07,393 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:07,721 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:07,744 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:07,778 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:08,041 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:08,062 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:08,095 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:08,294 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:08,318 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:08,353 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:08,715 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:08,746 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:08,777 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:09,277 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:09,302 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:09,338 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:09,738 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:09,773 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:09,807 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:10,040 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:10,063 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:10,103 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:10,453 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:10,479 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:10,511 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:10,834 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:10,859 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:10,892 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+INFO 2025-11-23 02:08:11,392 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+INFO 2025-11-23 02:08:12,928 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:08:13,552 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:14,088 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:14,110 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:14,151 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:23,564 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:23,593 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:23,629 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+WARNING 2025-11-23 02:08:23,926 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:08:23,948 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:08:23,984 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6234
+INFO 2025-11-23 02:09:02,545 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\views.py changed, reloading.
+INFO 2025-11-23 02:09:03,258 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:09:35,371 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+WARNING 2025-11-23 02:09:36,245 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:09:36,270 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:09:36,305 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+WARNING 2025-11-23 02:09:36,828 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:09:36,853 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:09:36,892 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+INFO 2025-11-23 02:09:37,358 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+INFO 2025-11-23 02:09:37,869 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:09:38,361 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+WARNING 2025-11-23 02:09:43,313 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:09:43,343 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:09:43,378 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+INFO 2025-11-23 02:09:44,615 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+WARNING 2025-11-23 02:10:19,783 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:19,802 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:19,839 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6248
+INFO 2025-11-23 02:10:26,521 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:10:27,829 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:10:28,560 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:28,592 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:28,623 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:10:29,094 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:29,117 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:29,164 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:10:29,332 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:29,354 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:29,388 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:10:29,716 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:29,748 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:29,782 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+INFO 2025-11-23 02:10:31,543 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:10:40,176 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:10:40,942 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:10:41,814 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:10:41,840 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:10:41,878 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+INFO 2025-11-23 02:10:51,989 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:11:07,555 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\views.py changed, reloading.
+INFO 2025-11-23 02:11:08,408 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:13:36,900 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+INFO 2025-11-23 02:13:36,961 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 02:13:36,962 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+WARNING 2025-11-23 02:13:37,584 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:13:37,609 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:13:37,652 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:13:38,284 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:13:38,312 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:13:38,347 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+INFO 2025-11-23 02:13:38,819 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:13:40,833 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:13:44,819 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7579
+INFO 2025-11-23 02:13:45,877 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:13:45,908 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:13:49,545 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:13:49,580 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 02:13:51,020 basehttp "GET /citas/ HTTP/1.1" 200 10523
+INFO 2025-11-23 02:13:51,153 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2273
+INFO 2025-11-23 02:13:54,721 basehttp "GET /citas/agendar/ HTTP/1.1" 200 12288
+INFO 2025-11-23 02:13:57,431 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 02:13:59,828 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7909
+INFO 2025-11-23 02:14:02,440 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 8182
+INFO 2025-11-23 02:27:38,831 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:27:38,838 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:27:38,886 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 02:27:38,887 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 02:27:38,891 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 02:27:38,892 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 02:27:49,927 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:27:49,957 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:27:51,013 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:27:51,770 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:27:51,795 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:27:51,839 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:28:14,091 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:28:14,119 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:28:14,162 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6516
+WARNING 2025-11-23 02:28:21,219 log Forbidden (CSRF token from the 'X-Csrftoken' HTTP header has incorrect length.): /notificaciones/api/marcar-todas/
+WARNING 2025-11-23 02:28:21,240 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 403 2554
+INFO 2025-11-23 02:28:21,276 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5759
+INFO 2025-11-23 02:28:32,661 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:32,688 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:37,874 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:37,901 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:38,214 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:38,242 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:38,576 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:38,604 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:38,927 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:38,961 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:40,468 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:41,870 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:41,895 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:42,214 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:42,243 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:28:42,558 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:28:42,585 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:29:06,346 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:29:06,373 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5586
+INFO 2025-11-23 02:29:07,618 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:29:07,635 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:29:30,866 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\views.py changed, reloading.
+INFO 2025-11-23 02:29:31,949 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:29:37,307 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:29:37,343 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 02:29:39,813 basehttp "GET /citas/ HTTP/1.1" 200 10523
+INFO 2025-11-23 02:29:39,949 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2273
+INFO 2025-11-23 02:29:46,873 basehttp "GET /citas/agendar/ HTTP/1.1" 200 12288
+INFO 2025-11-23 02:29:49,257 basehttp "GET /citas/ajax/cargar-mascotas/?propietario_id=3 HTTP/1.1" 200 58
+INFO 2025-11-23 02:30:01,018 basehttp "POST /citas/agendar/ HTTP/1.1" 200 12560
+INFO 2025-11-23 02:30:28,715 basehttp "POST /citas/agendar/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:28,745 basehttp "GET /citas/ HTTP/1.1" 200 10833
+INFO 2025-11-23 02:30:28,876 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2678
+INFO 2025-11-23 02:30:31,067 basehttp "GET /notificaciones/admin/ HTTP/1.1" 200 9690
+INFO 2025-11-23 02:30:32,870 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:32,880 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 02:30:36,211 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:36,240 basehttp "GET / HTTP/1.1" 200 5745
+INFO 2025-11-23 02:30:37,104 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6380
+INFO 2025-11-23 02:30:40,905 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:40,935 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:30:41,935 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:41,964 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:30:42,424 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:30:42,457 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:30:45,260 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:30:45,876 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:30:46,932 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:31:10,037 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:31:10,070 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:31:10,343 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:31:10,371 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 6207
+INFO 2025-11-23 02:31:33,768 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\views.py changed, reloading.
+INFO 2025-11-23 02:31:34,504 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 02:32:39,752 basehttp "POST /notificaciones/api/marcar-todas/ HTTP/1.1" 302 0
+INFO 2025-11-23 02:32:39,806 basehttp "GET /notificaciones/propietario/ HTTP/1.1" 200 5572

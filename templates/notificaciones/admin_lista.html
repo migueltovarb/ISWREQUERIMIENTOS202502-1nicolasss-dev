@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Notificaciones (Admin) - MyDOG{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="font-titulo text-primary-mydog">Notificaciones</h1>
+  <form class="d-flex" method="get">
+    <select name="tipo" class="form-select me-2">
+      <option value="">Todos los tipos</option>
+      <option value="CANCELACION">Cancelación</option>
+      <option value="SISTEMA">Sistema</option>
+      <option value="CONFIRMACION">Confirmación</option>
+      <option value="RECORDATORIO">Recordatorio</option>
+      <option value="RESULTADO">Resultado</option>
+    </select>
+    <input name="usuario" class="form-control me-2" placeholder="ID usuario">
+    <button class="btn btn-outline-primary" type="submit">Filtrar</button>
+  </form>
+ </div>
+
+<div class="list-group shadow-sm">
+  {% for n in notificaciones %}
+  <div class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <div>
+        <strong>#{{ n.id }}</strong> {{ n.get_tipo_display }} — {{ n.asunto }}<br>
+        <small>Para: {{ n.usuario.get_full_name }} · Actor: {{ n.actor.get_full_name|default:'-' }} · {{ n.fecha_envio }}</small>
+      </div>
+      <div>
+        {% if not n.leida %}<span class="badge bg-primary">No leída</span>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <div class="list-group-item text-muted">No hay notificaciones</div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -7,6 +7,7 @@ from .forms import CitaForm
 from mascotas.models import Mascota
 from datetime import datetime
 from autenticacion.decorators import staff_required
+from notificaciones.services import crear_evento_cita
 
 @login_required
 @staff_required
@@ -57,6 +58,13 @@ def agendar_cita(request):
             cita = form.save(commit=False)
             cita.usuario_creador = request.user
             cita.save()
+            crear_evento_cita(
+                actor=request.user,
+                cita=cita,
+                tipo='CONFIRMACION',
+                asunto='Nueva cita creada',
+                mensaje=f"Se creó la cita #{cita.id} para {cita.fecha} a las {cita.hora}"
+            )
             messages.success(request, 'Cita agendada exitosamente.')
             return redirect('citas:calendario')
     else:
@@ -93,6 +101,13 @@ def cancelar_cita(request, pk):
             cita.estado = 'CANCELADA'
             cita.motivo_cancelacion = motivo
             cita.save()
+            crear_evento_cita(
+                actor=request.user,
+                cita=cita,
+                tipo='CANCELACION',
+                asunto='Cita cancelada',
+                mensaje=f'La cita #{cita.id} fue cancelada. Motivo: {motivo}'
+            )
             messages.success(request, 'Cita cancelada exitosamente.')
             return redirect('citas:detalle', pk=pk)
         else:
@@ -141,6 +156,13 @@ def reprogramar_cita(request, pk):
         cita.fecha = nueva_fecha
         cita.hora = nueva_hora
         cita.save()
+        crear_evento_cita(
+            actor=request.user,
+            cita=cita,
+            tipo='SISTEMA',
+            asunto='Cita reprogramada',
+            mensaje=f'La cita #{cita.id} fue reprogramada para {nueva_fecha} a las {nueva_hora}'
+        )
         
         messages.success(request, 'Cita reprogramada exitosamente.')
         return redirect('citas:detalle', pk=pk)

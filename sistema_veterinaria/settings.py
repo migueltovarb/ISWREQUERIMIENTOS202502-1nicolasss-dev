@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "reportes",               # Generación de reportes
     "servicios",              # Gestión de servicios veterinarios
     "administracion",         # Panel admin y respaldos
+    "channels",               # WebSockets (notificaciones en tiempo real)
 ]
 
 MIDDLEWARE = [
@@ -69,12 +70,14 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.media",  # Para archivos de media
+                "notificaciones.context_processors.notificaciones_unread",
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = "sistema_veterinaria.wsgi.application"
+ASGI_APPLICATION = "sistema_veterinaria.asgi.application"
 
 # Configuración de base de datos SQLite
 DATABASES = {
@@ -225,4 +228,10 @@ HORARIO_LABORAL = {
     "hora_inicio": "08:00",
     "hora_fin": "18:00",
     "dias_laborales": [0, 1, 2, 3, 4, 5],  # Lunes (0) a Sábado (5)
+}
+# Canal de mensajes en memoria para desarrollo
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    }
 }

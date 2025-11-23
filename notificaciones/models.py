@@ -8,6 +8,7 @@ y el registro de notificaciones simuladas del sistema.
 from django.db import models
 
 
+
 class PreferenciaNotificacion(models.Model):
     """
     Modelo de Preferencia de Notificación (HU-017).
@@ -90,6 +91,15 @@ class Notificacion(models.Model):
         related_name='notificaciones',
         verbose_name='Usuario'
     )
+
+    actor = models.ForeignKey(
+        'autenticacion.Usuario',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='notificaciones_emitidas',
+        verbose_name='Actor'
+    )
     
     tipo = models.CharField(
         max_length=15,
@@ -137,11 +147,14 @@ class Notificacion(models.Model):
         help_text='Indica que es una notificación simulada (siempre True)'
     )
     
-    # Referencia a objeto relacionado (opcional)
-    cita_id = models.IntegerField(
+    # Referencia a cita relacionada (opcional)
+    cita = models.ForeignKey(
+        'citas.Cita',
+        on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name='ID de cita relacionada'
+        related_name='notificaciones',
+        verbose_name='Cita relacionada'
     )
     
     class Meta:
@@ -159,3 +172,23 @@ class Notificacion(models.Model):
             self.leida = True
             self.fecha_lectura = timezone.now()
             self.save()
+
+
+class NotificacionLog(models.Model):
+    """Registro de eventos de notificaciones (creación, lectura, envío)."""
+    ACCION_CHOICES = [
+        ('CREADA', 'Creada'),
+        ('LEIDA', 'Leída'),
+        ('ENVIADA', 'Enviada'),
+    ]
+
+    notificacion = models.ForeignKey(Notificacion, on_delete=models.CASCADE, related_name='logs')
+    accion = models.CharField(max_length=10, choices=ACCION_CHOICES)
+    usuario = models.ForeignKey('autenticacion.Usuario', on_delete=models.SET_NULL, null=True, blank=True)
+    detalles = models.JSONField(null=True, blank=True)
+    fecha = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Log de notificación'
+        verbose_name_plural = 'Logs de notificaciones'
+        ordering = ['-fecha']

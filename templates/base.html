@@ -85,8 +85,17 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'notificaciones:lista' %}">
+                            {% if user.rol == 'ADMIN' %}
+                            <a class="nav-link" href="{% url 'notificaciones:admin' %}">
+                            {% elif user.rol == 'VETERINARIO' %}
+                            <a class="nav-link" href="{% url 'notificaciones:veterinario' %}">
+                            {% else %}
+                            <a class="nav-link" href="{% url 'notificaciones:propietario' %}">
+                            {% endif %}
                                 <i class="bi bi-bell"></i> Notificaciones
+                                {% if notificaciones_unread %}
+                                <span id="notif-badge" class="badge bg-danger ms-1">{{ notificaciones_unread }}</span>
+                                {% endif %}
                             </a>
                         </li>
                         

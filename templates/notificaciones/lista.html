@@ -7,9 +7,13 @@
     <div class="col-md-8">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="font-titulo text-primary-mydog">Mis Notificaciones</h1>
+            <form method="post" action="{% url 'notificaciones:api_marcar_todas' %}">
+              {% csrf_token %}
+              <button id="mark-all" type="submit" class="btn btn-outline-secondary">Marcar todas como leídas</button>
+            </form>
         </div>
 
-        <div class="list-group shadow-sm">
+        <div id="notificaciones" class="list-group shadow-sm">
             {% for notificacion in notificaciones %}
             <div class="list-group-item list-group-item-action flex-column align-items-start p-3 {% if not notificacion.leida %}bg-light{% endif %}">
                 <div class="d-flex w-100 justify-content-between mb-1">
@@ -29,6 +33,32 @@
             </div>
             {% endfor %}
         </div>
+        <script>
+        (function(){
+          if(window.location.protocol.startsWith('http')){
+            var wsScheme = (window.location.protocol === 'https:' ? 'wss' : 'ws');
+            var socket = new WebSocket(wsScheme + '://' + window.location.host + '/ws/notificaciones/');
+            socket.onmessage = function(e){
+              try{ var d = JSON.parse(e.data); }catch(err){ return; }
+              var el = document.getElementById('notificaciones');
+              if(!el) return;
+              var item = document.createElement('div');
+              item.className = 'list-group-item list-group-item-action flex-column align-items-start p-3';
+              item.innerHTML = '<div class="d-flex w-100 justify-content-between mb-1">' +
+                               '<h5 class="mb-1 fw-bold text-primary-mydog">' + (d.asunto||'Nueva notificación') + '</h5>' +
+                               '<small class="text-muted">Ahora</small></div>' +
+                               '<p class="mb-1">' + (d.mensaje||'') + '</p>';
+              el.prepend(item);
+              var badge = document.getElementById('notif-badge');
+              if(badge){
+                var n = parseInt(badge.textContent||'0');
+                badge.textContent = (n+1).toString();
+                badge.classList.remove('d-none');
+              }
+            };
+          }
+        })();
+        </script>
     </div>
 </div>
 {% endblock %}
