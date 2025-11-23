@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Calendario de Citas - MyDOG{% endblock %}
+
+{% block extra_css %}
+<!-- FullCalendar CSS -->
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<style>
+    #calendar {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    .fc-event {
+        cursor: pointer;
+        border: none;
+    }
+    .fc-toolbar-title {
+        font-family: var(--font-titulo);
+        color: var(--color-primary);
+    }
+    .fc-button-primary {
+        background-color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
+        border-radius: 0 !important;
+    }
+    .fc-button-primary:hover {
+        background-color: var(--color-secondary) !important;
+        border-color: var(--color-secondary) !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="font-titulo text-primary-mydog">Agenda Veterinaria</h1>
+    <a href="{% url 'citas:agendar' %}" class="btn btn-primary-mydog">
+        <i class="bi bi-calendar-plus"></i> Nueva Cita
+    </a>
+</div>
+
+<div id='calendar'></div>
+
+<!-- Modal Detalle Cita -->
+<div class="modal fade" id="citaModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0 border-0">
+            <div class="modal-header bg-primary-mydog text-white rounded-0">
+                <h5 class="modal-title font-titulo" id="modalTitulo">Detalle de Cita</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Paciente:</strong> <span id="modalPaciente"></span></p>
+                <p><strong>Propietario:</strong> <span id="modalPropietario"></span></p>
+                <p><strong>Veterinario:</strong> <span id="modalVeterinario"></span></p>
+                <p><strong>Fecha y Hora:</strong> <span id="modalFecha"></span></p>
+                <p><strong>Estado:</strong> <span id="modalEstado" class="badge bg-info"></span></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="btnVerDetalle" class="btn btn-primary-mydog btn-sm">Ver Completo</a>
+                <button type="button" class="btn btn-secondary btn-sm rounded-0" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- FullCalendar JS -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'es',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: '{% url "citas:api_eventos" %}',
+            eventClick: function(info) {
+                // Llenar modal
+                document.getElementById('modalTitulo').textContent = info.event.title;
+                document.getElementById('modalPaciente').textContent = info.event.title.split(' - ')[0]; // Simplificado
+                document.getElementById('modalPropietario').textContent = info.event.extendedProps.propietario;
+                document.getElementById('modalVeterinario').textContent = info.event.extendedProps.veterinario;
+                
+                var fecha = new Date(info.event.start);
+                document.getElementById('modalFecha').textContent = fecha.toLocaleString();
+                
+                document.getElementById('modalEstado').textContent = info.event.extendedProps.estado;
+                
+                document.getElementById('btnVerDetalle').href = '/citas/' + info.event.id + '/';
+                
+                var modal = new bootstrap.Modal(document.getElementById('citaModal'));
+                modal.show();
+            }
+        });
+        calendar.render();
+    });
+</script>
+{% endblock %}

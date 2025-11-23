@@ -1,24 +1,30 @@
 """
-URL configuration for sistema_veterinnaria project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+Configuración de URLs para el proyecto MyDOG.
 """
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from .views import home
 
 urlpatterns = [
+    path("", home, name="home"),
     path("admin/", admin.site.urls),
-    path("issues/", include("issues.urls")),
+    
+    # URLs de aplicaciones (se descomentarán a medida que se implementen)
+    path("autenticacion/", include("autenticacion.urls")),
+    path("propietarios/", include("propietarios.urls")),
+    path("mascotas/", include("mascotas.urls")),
+    path("citas/", include("citas.urls")),
+    path("historiales/", include("historiales.urls")),
+    path("pagos/", include("pagos.urls")),
+    path("notificaciones/", include("notificaciones.urls")),
+    path("reportes/", include("reportes.urls")),
+    # path("servicios/", include("servicios.urls")),
 ]
+
+# Configuración para servir archivos estáticos y media en desarrollo
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

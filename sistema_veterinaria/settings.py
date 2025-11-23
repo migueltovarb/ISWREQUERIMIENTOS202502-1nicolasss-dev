@@ -7,6 +7,7 @@ Universidad Cooperativa de Colombia
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as messages
 
 # Construir rutas dentro del proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,7 +18,7 @@ SECRET_KEY = "django-insecure-mydog-2025-veterinaria-sistema-gestion"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "testserver"]
 
 # Definición de aplicaciones instaladas
 INSTALLED_APPS = [
@@ -28,19 +29,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "issues",
+    "crispy_forms",
+    "crispy_bootstrap5",
     
     # Apps personalizadas del proyecto MyDOG
-    # "autenticacion",          # Sistema de usuarios y roles
-    # "propietarios",           # Gestión de propietarios
-    # "mascotas",               # Gestión de mascotas
-    # "citas",                  # Agendamiento y calendario
-    # "historiales",            # Historiales clínicos
-    # "pagos",                  # Pagos y facturación simulados
-    # "notificaciones",         # Sistema de notificaciones simuladas
-    # "reportes",               # Generación de reportes
-    # "servicios",              # Gestión de servicios veterinarios
-    # "administracion",         # Panel admin y respaldos
+    "autenticacion",          # Sistema de usuarios y roles
+    "propietarios",           # Gestión de propietarios
+    "mascotas",               # Gestión de mascotas
+    "citas",                  # Agendamiento y calendario
+    "historiales",            # Historiales clínicos
+    "pagos",                  # Pagos y facturación simulados
+    "notificaciones",         # Sistema de notificaciones simuladas
+    "reportes",               # Generación de reportes
+    "servicios",              # Gestión de servicios veterinarios
+    "administracion",         # Panel admin y respaldos
 ]
 
 MIDDLEWARE = [
@@ -101,8 +103,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Modelo de usuario personalizado (descomentar cuando se cree la app autenticacion)
-# AUTH_USER_MODEL = 'autenticacion.Usuario'
+# Modelo de usuario personalizado
+AUTH_USER_MODEL = 'autenticacion.Usuario'
 
 # Internacionalización - Español (Colombia)
 LANGUAGE_CODE = "es-co"
@@ -123,8 +125,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # Tipo de campo de clave primaria por defecto
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-DEFAULT_CHARSET = "utf-8"
 
 # Configuración de sesiones (HU-003: Cierre automático después de 30 min)
 SESSION_COOKIE_AGE = 1800  # 30 minutos en segundos
@@ -197,7 +197,6 @@ LOGGING = {
 os.makedirs(BASE_DIR / "logs", exist_ok=True)
 
 # Configuración de mensajes de Django
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.DEBUG: 'debug',
     messages.INFO: 'info',
@@ -205,6 +204,10 @@ MESSAGE_TAGS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'error',
 }
+
+# Configuración de django-crispy-forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Configuración de tamaño máximo de archivos (HU-020: Adjuntos máx 10MB)
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10 MB en bytes

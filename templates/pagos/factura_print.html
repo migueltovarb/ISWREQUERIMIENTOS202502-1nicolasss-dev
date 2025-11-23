@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura {{ factura.numero_factura }}</title>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; padding: 40px; color: #333; }
+        .header { display: flex; justify-content: space-between; margin-bottom: 40px; border-bottom: 2px solid #00736A; padding-bottom: 20px; }
+        .logo { color: #00736A; font-weight: bold; font-size: 24px; }
+        .invoice-details { text-align: right; }
+        .client-details { margin-bottom: 40px; }
+        .table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+        .table th { text-align: left; border-bottom: 2px solid #eee; padding: 10px; background: #f9f9f9; }
+        .table td { border-bottom: 1px solid #eee; padding: 10px; }
+        .totals { float: right; width: 300px; }
+        .totals-row { display: flex; justify-content: space-between; padding: 5px 0; }
+        .total-final { font-weight: bold; font-size: 18px; border-top: 2px solid #333; margin-top: 10px; padding-top: 10px; }
+        .footer { margin-top: 100px; text-align: center; font-size: 12px; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
+        @media print {
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print" style="margin-bottom: 20px; text-align: right;">
+        <button onclick="window.print()" style="padding: 10px 20px; background: #00736A; color: white; border: none; cursor: pointer;">Imprimir / Guardar PDF</button>
+    </div>
+
+    <div class="header">
+        <div class="logo">MyDOG Veterinaria</div>
+        <div class="invoice-details">
+            <h1>FACTURA DE VENTA</h1>
+            <p><strong>N°:</strong> {{ factura.numero_factura }}</p>
+            <p><strong>Fecha:</strong> {{ factura.fecha_emision|date:"d/m/Y" }}</p>
+        </div>
+    </div>
+
+    <div class="client-details">
+        <h3>Cliente:</h3>
+        <p><strong>Nombre:</strong> {{ factura.propietario.nombre }}</p>
+        <p><strong>Documento:</strong> {{ factura.propietario.documento }}</p>
+        <p><strong>Dirección:</strong> {{ factura.propietario.direccion }}</p>
+        <p><strong>Teléfono:</strong> {{ factura.propietario.telefono }}</p>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {% if factura.pago.cita %}
+                        Servicio Veterinario: {{ factura.pago.cita.servicio.nombre }}
+                    {% else %}
+                        Servicios Veterinarios Generales
+                    {% endif %}
+                </td>
+                <td>1</td>
+                <td>${{ factura.subtotal }}</td>
+                <td>${{ factura.subtotal }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <div class="totals-row">
+            <span>Subtotal:</span>
+            <span>${{ factura.subtotal }}</span>
+        </div>
+        <div class="totals-row">
+            <span>Impuestos (0%):</span>
+            <span>${{ factura.impuestos }}</span>
+        </div>
+        <div class="totals-row total-final">
+            <span>TOTAL A PAGAR:</span>
+            <span>${{ factura.total }}</span>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div class="footer">
+        <p>Gracias por confiar en MyDOG Veterinaria.</p>
+        <p>Régimen Simplificado - NIT: 900.123.456-7</p>
+        <p>Calle 123 # 45-67, Bogotá D.C. - Tel: (601) 123 4567</p>
+    </div>
+</body>
+</html>

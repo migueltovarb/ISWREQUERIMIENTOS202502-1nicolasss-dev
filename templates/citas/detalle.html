@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de Cita - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary-mydog text-white py-3 d-flex justify-content-between align-items-center">
+                <h3 class="font-titulo mb-0">Detalle de Cita #{{ cita.id }}</h3>
+                <span class="badge bg-light text-dark">{{ cita.get_estado_display }}</span>
+            </div>
+            <div class="card-body p-4">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="text-muted mb-3">Información de la Cita</h5>
+                        <p><strong>Fecha:</strong> {{ cita.fecha }}</p>
+                        <p><strong>Hora:</strong> {{ cita.hora }}</p>
+                        <p><strong>Servicio:</strong> {{ cita.servicio.get_nombre_display }}</p>
+                        <p><strong>Veterinario:</strong> {{ cita.veterinario.get_full_name }}</p>
+                        {% if cita.es_emergencia %}
+                            <p class="text-danger fw-bold"><i class="bi bi-exclamation-triangle-fill"></i> EMERGENCIA</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-muted mb-3">Paciente y Propietario</h5>
+                        <p><strong>Paciente:</strong> <a href="{% url 'mascotas:detalle' cita.mascota.pk %}" class="text-decoration-none">{{ cita.mascota.nombre }}</a></p>
+                        <p><strong>Especie:</strong> {{ cita.mascota.get_especie_display }}</p>
+                        <p><strong>Propietario:</strong> <a href="{% url 'propietarios:detalle' cita.propietario.pk %}" class="text-decoration-none">{{ cita.propietario.nombre }}</a></p>
+                        <p><strong>Teléfono:</strong> {{ cita.propietario.telefono }}</p>
+                    </div>
+                </div>
+                
+                {% if cita.observaciones %}
+                <div class="alert alert-light border">
+                    <h6 class="fw-bold">Observaciones:</h6>
+                    <p class="mb-0">{{ cita.observaciones }}</p>
+                </div>
+                {% endif %}
+                
+                <div class="d-flex justify-content-between mt-4 border-top pt-3">
+                    <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Volver al Calendario</a>
+                    
+                    <div class="btn-group">
+                        {% if cita.estado == 'PROGRAMADA' %}
+                            <a href="{% url 'citas:cancelar' cita.pk %}" class="btn btn-outline-danger">Cancelar Cita</a>
+                            <a href="{% url 'citas:reprogramar' cita.pk %}" class="btn btn-outline-primary">Reprogramar</a>
+                            <a href="{% url 'citas:confirmar' cita.pk %}" class="btn btn-success">Confirmar Asistencia</a>
+                        {% endif %}
+                        
+                        {% if cita.estado == 'CONFIRMADA' %}
+                            <a href="{% url 'historiales:registrar_cita' cita.mascota.pk cita.pk %}" class="btn btn-primary-mydog">Iniciar Consulta</a>
+                        {% endif %}
+
+                        {% if cita.estado == 'COMPLETADA' %}
+                            {% if not cita.pagos.exists %}
+                                <a href="{% url 'pagos:registrar_cita' cita.pk %}" class="btn btn-success">
+                                    <i class="bi bi-cash-coin"></i> Registrar Pago
+                                </a>
+                            {% else %}
+                                <a href="{% url 'pagos:detalle' cita.pagos.first.pk %}" class="btn btn-outline-success">
+                                    <i class="bi bi-check-circle"></i> Ver Pago
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

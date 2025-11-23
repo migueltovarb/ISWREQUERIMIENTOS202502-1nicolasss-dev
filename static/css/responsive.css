@@ -1,0 +1,26 @@
+/* Estilos Responsive */
+
+/* Móvil */
+@media (max-width: 767.98px) {
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Ajustes para tablet si son necesarios */
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    /* Ajustes para desktop */
+}

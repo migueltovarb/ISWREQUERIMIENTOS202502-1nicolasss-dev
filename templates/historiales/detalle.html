@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Consulta #{{ historial.pk }} - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Detalle de la Consulta -->
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-primary-mydog text-white py-3 d-flex justify-content-between align-items-center">
+                <h3 class="font-titulo mb-0">Consulta del {{ historial.fecha_consulta }}</h3>
+                <span class="badge bg-light text-dark">Dr. {{ historial.veterinario.get_full_name }}</span>
+            </div>
+            <div class="card-body p-4">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5 class="text-muted mb-3">Paciente</h5>
+                        <p class="fs-5 fw-bold mb-0">
+                            <a href="{% url 'mascotas:detalle' historial.mascota.pk %}" class="text-decoration-none text-dark">
+                                {{ historial.mascota.nombre }}
+                            </a>
+                        </p>
+                        <p class="text-muted">{{ historial.mascota.get_especie_display }} - {{ historial.mascota.raza }}</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        {% if historial.peso_actual %}
+                        <div class="p-3 bg-light rounded d-inline-block">
+                            <small class="d-block text-muted">Peso Registrado</small>
+                            <span class="fs-4 fw-bold text-primary-mydog">{{ historial.peso_actual }} Kg</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-primary-mydog">Diagnóstico</h5>
+                    <p>{{ historial.diagnostico|linebreaks }}</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-primary-mydog">Tratamiento</h5>
+                    <p>{{ historial.tratamiento|linebreaks }}</p>
+                </div>
+                
+                {% if historial.vacunas %}
+                <div class="mb-4">
+                    <h5 class="fw-bold text-primary-mydog">Vacunas Aplicadas</h5>
+                    <p>{{ historial.vacunas|linebreaks }}</p>
+                </div>
+                {% endif %}
+                
+                {% if historial.procedimientos %}
+                <div class="mb-4">
+                    <h5 class="fw-bold text-primary-mydog">Procedimientos</h5>
+                    <p>{{ historial.procedimientos|linebreaks }}</p>
+                </div>
+                {% endif %}
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-primary-mydog">Evolución</h5>
+                    <p>{{ historial.evolucion|linebreaks }}</p>
+                </div>
+                
+                <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                    <a href="{% url 'historiales:lista_mascota' historial.mascota.pk %}" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver al Historial
+                    </a>
+                    <button class="btn btn-primary-mydog" onclick="window.print()">
+                        <i class="bi bi-printer"></i> Imprimir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Archivos Adjuntos -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header bg-white py-3">
+                <h5 class="font-titulo text-primary-mydog mb-0">Archivos Adjuntos</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush mb-4">
+                    {% for archivo in archivos %}
+                    <a href="{{ archivo.archivo.url }}" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-file-earmark-text fs-4 me-3 text-muted"></i>
+                        <div>
+                            <h6 class="mb-0">{{ archivo.tipo }}</h6>
+                            <small class="text-muted">{{ archivo.descripcion|default:archivo.fecha_carga }}</small>
+                        </div>
+                    </a>
+                    {% empty %}
+                    <p class="text-muted text-center py-3">No hay archivos adjuntos.</p>
+                    {% endfor %}
+                </div>
+                
+                {% if user.rol == 'VETERINARIO' or user.es_admin %}
+                <hr>
+                <h6 class="fw-bold mb-3">Subir Archivo</h6>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ archivo_form|crispy }}
+                    <button type="submit" name="subir_archivo" class="btn btn-sm btn-primary-mydog w-100 mt-2">
+                        Subir Archivo
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

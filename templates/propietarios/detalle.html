@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ propietario.nombre }} - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Información del Propietario -->
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-body">
+                <h3 class="font-titulo text-primary-mydog mb-3">Información Personal</h3>
+                <div class="mb-3">
+                    <label class="text-muted small">Nombre Completo</label>
+                    <p class="fw-bold mb-0">{{ propietario.nombre }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted small">Documento</label>
+                    <p class="mb-0">{{ propietario.documento }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted small">Teléfono</label>
+                    <p class="mb-0">{{ propietario.telefono }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted small">Correo Electrónico</label>
+                    <p class="mb-0">{{ propietario.correo }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted small">Dirección</label>
+                    <p class="mb-0">{{ propietario.direccion|default:"No registrada" }}</p>
+                </div>
+                
+                <div class="d-grid gap-2 mt-4">
+                    <a href="{% url 'propietarios:editar' propietario.pk %}" class="btn btn-outline-primary">Editar Información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mascotas del Propietario -->
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
+                <h3 class="font-titulo text-primary-mydog mb-0">Mascotas</h3>
+                <a href="{% url 'mascotas:registrar' propietario.pk %}" class="btn btn-sm btn-primary-mydog">
+                    <i class="bi bi-plus-lg"></i> Nueva Mascota
+                </a>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    {% for mascota in propietario.mascotas.all %}
+                    <a href="{% url 'mascotas:editar' mascota.pk %}" class="list-group-item list-group-item-action p-3">
+                        <div class="d-flex w-100 justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-3">
+                                {% if mascota.foto %}
+                                    <img src="{{ mascota.foto.url }}" alt="{{ mascota.nombre }}" class="rounded-circle" width="50" height="50" style="object-fit: cover;">
+                                {% else %}
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                        <i class="bi bi-paw text-muted"></i>
+                                    </div>
+                                {% endif %}
+                                <div>
+                                    <h5 class="mb-1 fw-bold">{{ mascota.nombre }}</h5>
+                                    <small class="text-muted">{{ mascota.especie }} - {{ mascota.raza }}</small>
+                                </div>
+                            </div>
+                            <span class="badge bg-light text-dark">{{ mascota.edad }} años</span>
+                        </div>
+                    </a>
+                    {% empty %}
+                    <div class="text-center py-4 text-muted">
+                        <p class="mb-0">Este propietario no tiene mascotas registradas.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Reprogramar Cita - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary-mydog text-white py-3">
+                <h3 class="font-titulo mb-0">Reprogramar Cita #{{ cita.id }}</h3>
+            </div>
+            <div class="card-body p-4">
+                <p><strong>Fecha actual:</strong> {{ cita.fecha }} {{ cita.hora }}</p>
+                <p><strong>Paciente:</strong> {{ cita.mascota.nombre }}</p>
+                <p><strong>Servicio:</strong> {{ cita.servicio.get_nombre_display }}</p>
+                
+                <hr>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Nueva Fecha</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control" value="{{ cita.fecha|date:'Y-m-d' }}" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="hora" class="form-label">Nueva Hora</label>
+                        <input type="time" name="hora" id="hora" class="form-control" value="{{ cita.hora|time:'H:i' }}" required>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Se requiere al menos 12 horas de anticipación para reprogramar.
+                    </div>
+                    
+                    <div class="d-flex justify-content-end gap-2 mt-4">
+                        <a href="{% url 'citas:detalle' cita.pk %}" class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary-mydog">Confirmar Reprogramación</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

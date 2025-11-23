@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MyDOG - Sistema Veterinario{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS (para estructura base) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-mydog">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/${logo_header}.png' %}" alt="MyDOG Logo" height="48" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                        
+                        {% if user.rol != 'PROPIETARIO' %}
+                        {# Opciones para Staff (Admin, Vet, Administrativo) #}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'citas:calendario' %}">
+                                <i class="bi bi-calendar-check"></i> Citas
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-people"></i> Gestión
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'propietarios:lista' %}">Propietarios</a></li>
+                                <li><a class="dropdown-item" href="{% url 'propietarios:registrar' %}">Nuevo Propietario</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'pagos:lista' %}">Historial de Pagos</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+                        
+                        {# Opción de Historiales (todos los usuarios) #}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'historiales:mis_mascotas' %}">
+                                <i class="bi bi-journal-medical"></i> 
+                                {% if user.rol == 'PROPIETARIO' %}Mis Mascotas{% else %}Historiales{% endif %}
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'notificaciones:lista' %}">
+                                <i class="bi bi-bell"></i> Notificaciones
+                            </a>
+                        </li>
+                        
+                        {% if user.es_admin %}
+                        {# Opciones solo para Administradores #}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-gear"></i> Admin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/admin/">Django Admin</a></li>
+                                <li><a class="dropdown-item" href="{% url 'reportes:generar' %}">Reportes</a></li>
+                                <li><a class="dropdown-item" href="{% url 'autenticacion:registro' %}">Nuevo Usuario</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle"></i> {{ user.get_full_name|default:user.username }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'autenticacion:logout' %}">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'autenticacion:login' %}">Iniciar Sesión</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mensajes Flash -->
+    <div class="container mt-3">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container py-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <img src="{% static 'img/${logo_footer}.png' %}" alt="MyDOG Footer" height="32" class="mb-2">
+            <p class="text-muted mb-0">&copy; 2025 MyDOG - Sistema de Gestión Veterinaria</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

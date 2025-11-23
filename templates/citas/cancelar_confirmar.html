@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Cancelar Cita - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-danger text-white py-3">
+                <h3 class="font-titulo mb-0">Cancelar Cita #{{ cita.id }}</h3>
+            </div>
+            <div class="card-body p-4">
+                {% if not puede_cancelar %}
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle-fill"></i> {{ mensaje }}
+                    </div>
+                    <a href="{% url 'citas:detalle' cita.pk %}" class="btn btn-secondary">Volver</a>
+                {% else %}
+                    <p><strong>Fecha:</strong> {{ cita.fecha }} {{ cita.hora }}</p>
+                    <p><strong>Paciente:</strong> {{ cita.mascota.nombre }}</p>
+                    <p><strong>Servicio:</strong> {{ cita.servicio.get_nombre_display }}</p>
+                    
+                    <form method="post" class="mt-4">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de cancelación (opcional)</label>
+                            <textarea name="motivo" id="motivo" class="form-control" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="d-flex justify-content-end gap-2">
+                            <a href="{% url 'citas:detalle' cita.pk %}" class="btn btn-outline-secondary">No Cancelar</a>
+                            <button type="submit" class="btn btn-danger">Confirmar Cancelación</button>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

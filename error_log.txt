@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\management\__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\management\__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\management\base.py", line 416, in run_from_argv
+    self.execute(*args, **cmd_options)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\management\base.py", line 457, in execute
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\management\base.py", line 492, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\checks\registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\core\checks\urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Program Files\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\urls.py", line 23, in <module>
+    path("issues/", include("issues.urls")),
+                    ~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Program Files\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\issues\urls.py", line 2, in <module>
+    from .views import text_sample, json_sample, db_json
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\issues\views.py", line 3, in <module>
+    from .models import Issue
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\issues\models.py", line 4, in <module>
+    class Issue(models.Model):
+    ...<4 lines>...
+            return self.titulo
+  File "C:\Users\Nicolas\AppData\Roaming\Python\Python313\site-packages\django\db\models\base.py", line 136, in __new__
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: Model class issues.models.Issue doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.

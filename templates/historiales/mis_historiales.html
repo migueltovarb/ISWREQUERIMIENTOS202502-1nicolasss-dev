@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Mis Mascotas - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="font-titulo text-primary-mydog mb-4">Mis Mascotas e Historiales</h1>
+    </div>
+</div>
+
+<div class="row">
+    {% if mascotas %}
+        {% for mascota in mascotas %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    {% if mascota.foto %}
+                        <img src="{{ mascota.foto.url }}" alt="{{ mascota.nombre }}" class="rounded-circle mb-3" width="120" height="120" style="object-fit: cover;">
+                    {% else %}
+                        <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 120px; height: 120px;">
+                            <i class="bi bi-paw text-muted" style="font-size: 3rem;"></i>
+                        </div>
+                    {% endif %}
+                    
+                    <h3 class="font-titulo text-primary-mydog mb-2">{{ mascota.nombre }}</h3>
+                    <p class="text-muted mb-3">{{ mascota.get_especie_display }} - {{ mascota.raza }}</p>
+                    
+                    <div class="mb-3 text-start">
+                        <p class="mb-1"><strong>Edad:</strong> {{ mascota.edad_texto }}</p>
+                        <p class="mb-1"><strong>Peso:</strong> {{ mascota.peso|default:"--" }} Kg</p>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'historiales:lista_mascota' mascota.pk %}" class="btn btn-primary-mydog">
+                            <i class="bi bi-file-medical-fill"></i> Ver Historial Médico
+                        </a>
+                        <a href="{% url 'mascotas:detalle' mascota.pk %}" class="btn btn-outline-secondary btn-sm">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="col-12">
+            <div class="alert alert-info text-center">
+                <i class="bi bi-info-circle fs-1 d-block mb-3"></i>
+                <h4>No tienes mascotas registradas</h4>
+                <p>Contacta a la clínica para registrar a tu mascota.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ titulo }} - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h2 class="font-titulo text-primary-mydog mb-4">{{ titulo }}</h2>
+                
+                <form method="post" id="citaForm">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    
+                    <div class="d-flex justify-content-end gap-2 mt-4">
+                        <a href="{% url 'citas:calendario' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary-mydog">Agendar Cita</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const propietarioSelect = document.getElementById('id_propietario');
+        const mascotaSelect = document.getElementById('id_mascota');
+        
+        propietarioSelect.addEventListener('change', function() {
+            const propietarioId = this.value;
+            
+            // Limpiar select de mascotas
+            mascotaSelect.innerHTML = '<option value="">---------</option>';
+            
+            if (propietarioId) {
+                fetch(`{% url 'citas:cargar_mascotas' %}?propietario_id=${propietarioId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(mascota => {
+                            const option = document.createElement('option');
+                            option.value = mascota.id;
+                            option.textContent = mascota.nombre;
+                            mascotaSelect.appendChild(option);
+                        });
+                    });
+            }
+        });
+    });
+</script>
+{% endblock %}

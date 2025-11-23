@@ -2,5 +2,6 @@ from django.apps import AppConfig
 
 
 class HistorialesConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = "historiales"
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'historiales'
+    verbose_name = 'Historiales Clínicos'

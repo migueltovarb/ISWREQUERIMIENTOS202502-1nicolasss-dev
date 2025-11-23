@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="font-titulo text-primary-mydog mb-4">Bienvenido, {{ user.get_full_name|default:user.username }}</h1>
+        <p class="lead">Sistema de Gestión Veterinaria MyDOG</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm border-0 text-white bg-primary-mydog">
+            <div class="card-body text-center">
+                <i class="bi bi-calendar-check fs-1 mb-2"></i>
+                <h3 class="font-titulo">Citas</h3>
+                <a href="{% url 'citas:calendario' %}" class="btn btn-light btn-sm mt-2">Ver Calendario</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="bi bi-people fs-1 mb-2 text-primary-mydog"></i>
+                <h3 class="font-titulo">Propietarios</h3>
+                <a href="{% url 'propietarios:lista' %}" class="btn btn-outline-primary btn-sm mt-2">Ver Listado</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="bi bi-file-medical fs-1 mb-2 text-primary-mydog"></i>
+                <h3 class="font-titulo">Historiales</h3>
+                <a href="{% url 'propietarios:lista' %}" class="btn btn-outline-primary btn-sm mt-2">Buscar Mascota</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="bi bi-cash-coin fs-1 mb-2 text-primary-mydog"></i>
+                <h3 class="font-titulo">Pagos</h3>
+                <a href="{% url 'pagos:lista' %}" class="btn btn-outline-primary btn-sm mt-2">Ver Historial</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
