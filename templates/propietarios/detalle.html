@@ -30,7 +30,7 @@
                     <p class="mb-0">{{ propietario.direccion|default:"No registrada" }}</p>
                 </div>
                 
-                {% if user.rol != 'PROPIETARIO' %}
+                {% if user.rol != 'PROPIETARIO' or user.propietario.id == propietario.pk %}
                 <div class="d-grid gap-2 mt-4">
                     <a href="{% url 'propietarios:editar' propietario.pk %}" class="btn btn-outline-primary">Editar Información</a>
                 </div>
@@ -44,7 +44,7 @@
         <div class="card shadow-sm border-0">
             <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
                 <h3 class="font-titulo text-primary-mydog mb-0">Mascotas</h3>
-                {% if user.rol != 'PROPIETARIO' %}
+                {% if user.rol != 'PROPIETARIO' or user.propietario.id == propietario.pk %}
                 <a href="{% url 'mascotas:registrar' propietario.pk %}" class="btn btn-sm btn-primary-mydog">
                     <i class="bi bi-plus-lg"></i> Nueva Mascota
                 </a>

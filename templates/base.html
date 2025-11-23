@@ -109,7 +109,13 @@
                                 <i class="bi bi-person-circle"></i> {{ user.get_full_name|default:user.username }}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                                <li>
+                                    {% if user.rol == 'PROPIETARIO' and user.propietario %}
+                                        <a class="dropdown-item" href="{% url 'propietarios:detalle' user.propietario.id %}">Mi Perfil</a>
+                                    {% else %}
+                                        <a class="dropdown-item" href="/admin/">Mi Perfil</a>
+                                    {% endif %}
+                                </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{% url 'autenticacion:logout' %}">Cerrar Sesión</a></li>
                             </ul>

@@ -47,12 +47,13 @@
                     {% endif %}
                     
                     {# Acciones solo para staff (Admin, Veterinario, Administrativo) #}
-                    {% if user.rol != 'PROPIETARIO' %}
                     <div class="btn-group">
                         {% if cita.estado == 'PROGRAMADA' %}
                             <a href="{% url 'citas:cancelar' cita.pk %}" class="btn btn-outline-danger">Cancelar Cita</a>
                             <a href="{% url 'citas:reprogramar' cita.pk %}" class="btn btn-outline-primary">Reprogramar</a>
-                            <a href="{% url 'citas:confirmar' cita.pk %}" class="btn btn-success">Confirmar Asistencia</a>
+                            {% if user.rol != 'PROPIETARIO' %}
+                                <a href="{% url 'citas:confirmar' cita.pk %}" class="btn btn-success">Confirmar Asistencia</a>
+                            {% endif %}
                         {% endif %}
                         
                         {% if cita.estado == 'CONFIRMADA' and user.es_veterinario %}
@@ -71,10 +72,17 @@
                             {% endif %}
                         {% endif %}
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
+                {% if user.rol == 'PROPIETARIO' and user.propietario %}
+                <div class="mt-4">
+                    <div class="btn-group">
+                        <a href="{% url 'propietarios:editar' user.propietario.id %}" class="btn btn-outline-secondary">Editar mi información</a>
+                        <a href="{% url 'mascotas:registrar' user.propietario.id %}" class="btn btn-outline-primary">Agregar nueva mascota</a>
+                    </div>
+                </div>
+                {% endif %}

@@ -62,19 +62,30 @@ def registrar_propietario(request):
 def detalle_propietario(request, pk):
     """Ver detalles de un propietario (HU-007)."""
     propietario = get_object_or_404(Propietario, pk=pk)
+    if request.user.rol == 'PROPIETARIO' and propietario.usuario_id != request.user.id:
+        return redirect('home')
     return render(request, 'propietarios/detalle.html', {'propietario': propietario})
 
 @login_required
 def editar_propietario(request, pk):
     """Editar información de propietario (HU-006)."""
     propietario = get_object_or_404(Propietario, pk=pk)
+    if request.user.rol == 'PROPIETARIO' and propietario.usuario_id != request.user.id:
+        return redirect('home')
     if request.method == 'POST':
         form = PropietarioForm(request.POST, instance=propietario)
+        if request.user.rol == 'PROPIETARIO':
+            form.fields['documento'].disabled = True
         if form.is_valid():
+            if request.user.rol == 'PROPIETARIO':
+                form.cleaned_data.pop('documento', None)
+                form.instance.documento = propietario.documento
             form.save()
             messages.success(request, 'Información actualizada exitosamente.')
             return redirect('propietarios:detalle', pk=pk)
     else:
         form = PropietarioForm(instance=propietario)
+        if request.user.rol == 'PROPIETARIO':
+            form.fields['documento'].disabled = True
     
     return render(request, 'propietarios/formulario.html', {'form': form, 'titulo': 'Editar Propietario'})

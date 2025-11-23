@@ -3523,3 +3523,89 @@ INFO 2025-11-23 01:07:51,777 basehttp "GET /static/admin/js/prepopulate_init.js 
 INFO 2025-11-23 01:07:51,850 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
 INFO 2025-11-23 01:07:51,858 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
 INFO 2025-11-23 01:07:51,858 basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-11-23 01:08:05,487 basehttp "POST /admin/autenticacion/usuario/6/change/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:08:05,521 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 28545
+INFO 2025-11-23 01:08:05,605 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:08:07,441 basehttp "GET /admin/autenticacion/usuario/5/change/ HTTP/1.1" 200 45628
+INFO 2025-11-23 01:08:07,481 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-23 01:08:07,481 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-11-23 01:08:07,487 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-11-23 01:08:07,488 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-23 01:08:07,525 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:08:13,397 basehttp "POST /admin/autenticacion/usuario/5/change/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:08:13,439 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 28537
+INFO 2025-11-23 01:08:13,509 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:08:15,810 basehttp "GET /admin/autenticacion/usuario/7/change/ HTTP/1.1" 200 45698
+INFO 2025-11-23 01:08:15,850 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-23 01:08:15,853 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-23 01:08:15,897 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:08:19,578 basehttp "GET /admin/autenticacion/usuario/ HTTP/1.1" 200 28311
+INFO 2025-11-23 01:08:23,107 basehttp "GET /admin/autenticacion/usuario/1/change/ HTTP/1.1" 200 45678
+INFO 2025-11-23 01:08:23,146 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-11-23 01:08:23,146 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2025-11-23 01:08:23,192 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9662
+INFO 2025-11-23 01:08:28,317 basehttp "GET / HTTP/1.1" 200 7906
+INFO 2025-11-23 01:08:28,351 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:08:28,352 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:16:09,524 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 01:16:17,555 basehttp "GET / HTTP/1.1" 200 8060
+INFO 2025-11-23 01:16:17,594 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 01:16:17,595 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 01:16:17,815 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:16:17,815 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:16:17,953 basehttp - Broken pipe from ('127.0.0.1', 50167)
+INFO 2025-11-23 01:16:23,355 basehttp "GET /admin/ HTTP/1.1" 200 22952
+INFO 2025-11-23 01:16:23,400 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-11-23 01:16:23,405 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-11-23 01:16:23,412 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-11-23 01:16:23,414 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-11-23 01:16:27,243 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:16:27,368 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 01:16:31,144 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:16:31,171 basehttp "GET / HTTP/1.1" 200 5516
+INFO 2025-11-23 01:16:32,305 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7350
+INFO 2025-11-23 01:16:33,377 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 5798
+INFO 2025-11-23 01:16:35,139 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7400
+INFO 2025-11-23 01:16:37,008 basehttp "GET /citas/10/ HTTP/1.1" 200 6664
+INFO 2025-11-23 01:16:39,177 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8207
+INFO 2025-11-23 01:16:41,016 basehttp "GET /mascotas/5/editar/ HTTP/1.1" 200 8710
+INFO 2025-11-23 01:16:46,534 basehttp "GET /citas/10/cancelar/ HTTP/1.1" 200 5784
+INFO 2025-11-23 01:16:49,006 basehttp "GET /citas/10/ HTTP/1.1" 200 6664
+INFO 2025-11-23 01:16:49,968 basehttp "GET /citas/10/reprogramar/ HTTP/1.1" 200 6234
+INFO 2025-11-23 01:16:51,480 basehttp "GET /citas/10/ HTTP/1.1" 200 6664
+INFO 2025-11-23 01:16:54,563 basehttp "GET /mascotas/4/ HTTP/1.1" 200 7400
+INFO 2025-11-23 01:16:56,176 basehttp "GET /citas/10/ HTTP/1.1" 200 6664
+INFO 2025-11-23 01:16:59,207 basehttp "GET / HTTP/1.1" 200 5516
+INFO 2025-11-23 01:17:00,608 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8207
+INFO 2025-11-23 01:17:02,832 basehttp "GET / HTTP/1.1" 200 5516
+INFO 2025-11-23 01:17:04,200 basehttp "GET /notificaciones/ HTTP/1.1" 200 4869
+INFO 2025-11-23 01:21:10,801 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8594
+INFO 2025-11-23 01:21:10,856 basehttp "GET /static/img/logo-mydog-blanco.png HTTP/1.1" 200 12948
+INFO 2025-11-23 01:21:10,857 basehttp "GET /static/img/logo-mydog-negro.png HTTP/1.1" 200 11427
+INFO 2025-11-23 01:21:10,889 basehttp "GET /static/img/logo-mydog-mascota.png HTTP/1.1" 200 24357
+INFO 2025-11-23 01:21:14,315 basehttp "GET /mascotas/5/editar/ HTTP/1.1" 200 8710
+WARNING 2025-11-23 01:21:16,005 log Not Found: /favicon.ico
+INFO 2025-11-23 01:21:16,006 basehttp - Broken pipe from ('127.0.0.1', 50816)
+INFO 2025-11-23 01:21:20,985 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7555
+WARNING 2025-11-23 01:21:24,464 log Not Found: /propietarios/
+WARNING 2025-11-23 01:21:24,465 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+INFO 2025-11-23 01:21:26,083 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 01:21:26,974 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 01:21:35,112 basehttp "POST /propietarios/3/editar/ HTTP/1.1" 302 0
+INFO 2025-11-23 01:21:35,171 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8915
+INFO 2025-11-23 01:21:36,806 basehttp "GET /mascotas/5/editar/ HTTP/1.1" 200 8710
+INFO 2025-11-23 01:21:42,641 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7555
+WARNING 2025-11-23 01:21:45,611 log Not Found: /propietarios/
+WARNING 2025-11-23 01:21:45,612 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+WARNING 2025-11-23 01:21:54,002 log Not Found: /propietarios/
+WARNING 2025-11-23 01:21:54,002 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+WARNING 2025-11-23 01:22:11,522 log Not Found: /propietarios/
+WARNING 2025-11-23 01:22:11,522 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+WARNING 2025-11-23 01:24:44,967 log Not Found: /propietarios/
+WARNING 2025-11-23 01:24:44,967 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+WARNING 2025-11-23 01:24:46,446 log Not Found: /propietarios/
+WARNING 2025-11-23 01:24:46,446 basehttp "GET /propietarios/ HTTP/1.1" 404 2918
+INFO 2025-11-23 01:24:48,161 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7611
+INFO 2025-11-23 01:24:48,903 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8594
+INFO 2025-11-23 01:24:50,317 basehttp "GET /propietarios/3/editar/ HTTP/1.1" 200 7611
+INFO 2025-11-23 01:24:51,321 basehttp "GET /propietarios/3/ HTTP/1.1" 200 8594

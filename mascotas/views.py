@@ -10,6 +10,8 @@ from autenticacion.models import Usuario
 def registrar_mascota(request, propietario_id):
     """Registrar nueva mascota para un propietario (HU-008)."""
     propietario = get_object_or_404(Propietario, pk=propietario_id)
+    if request.user.rol == 'PROPIETARIO' and propietario.usuario_id != request.user.id:
+        return redirect('home')
     
     if request.method == 'POST':
         form = MascotaForm(request.POST, request.FILES)
@@ -38,6 +40,8 @@ def detalle_mascota(request, pk):
 def editar_mascota(request, pk):
     """Editar información de mascota (HU-009)."""
     mascota = get_object_or_404(Mascota, pk=pk)
+    if request.user.rol == 'PROPIETARIO' and mascota.propietario.usuario_id != request.user.id:
+        return redirect('home')
     if request.method == 'POST':
         form = MascotaForm(request.POST, request.FILES, instance=mascota)
         if form.is_valid():

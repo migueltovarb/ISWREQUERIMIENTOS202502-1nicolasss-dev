@@ -81,6 +81,9 @@ def cargar_mascotas(request):
 def cancelar_cita(request, pk):
     """Cancelar una cita (HU-015)."""
     cita = get_object_or_404(Cita, pk=pk)
+    if request.user.rol == 'PROPIETARIO' and cita.propietario.usuario_id != request.user.id:
+        messages.error(request, 'No tienes permisos para gestionar esta cita.')
+        return redirect('citas:detalle', pk=pk)
     
     puede_cancelar, mensaje = cita.puede_cancelar(request.user)
     
@@ -121,6 +124,9 @@ def confirmar_cita(request, pk):
 def reprogramar_cita(request, pk):
     """Reprogramar una cita (HU-014)."""
     cita = get_object_or_404(Cita, pk=pk)
+    if request.user.rol == 'PROPIETARIO' and cita.propietario.usuario_id != request.user.id:
+        messages.error(request, 'No tienes permisos para gestionar esta cita.')
+        return redirect('citas:detalle', pk=pk)
     
     puede_reprogramar, mensaje = cita.puede_reprogramar(request.user)
     
