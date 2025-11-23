@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ titulo }} - MyDOG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h2 class="font-titulo text-primary-mydog mb-4">
+                    <i class="bi bi-arrow-left-right"></i> {{ titulo }}
+                </h2>
+                
+                <div class="alert alert-info mb-4">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Información:</strong> Esta acción transferirá la mascota seleccionada a un nuevo propietario. 
+                    Se mantendrá un registro completo de la transferencia para auditoría.
+                </div>
+                
+                <form method="post" id="transferForm">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    
+                    <div class="d-flex justify-content-end gap-2 mt-4">
+                        <a href="{% url 'propietarios:lista' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary-mydog" id="submitBtn">
+                            <i class="bi bi-arrow-left-right"></i> Transferir Mascota
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('transferForm').addEventListener('submit', function(e) {
+    const mascota = document.querySelector('select[name="mascota"]').selectedOptions[0]?.text;
+    const propietario = document.querySelector('select[name="nuevo_propietario"]').selectedOptions[0]?.text;
+    
+    if (mascota && propietario) {
+        if (!confirm(`¿Está seguro de transferir "${mascota}" a "${propietario}"?`)) {
+            e.preventDefault();
+        }
+    }
+});
+</script>
+{% endblock %}

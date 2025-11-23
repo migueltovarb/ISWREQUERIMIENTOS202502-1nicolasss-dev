@@ -1,5 +1,6 @@
 from django import forms
-from .models import Mascota
+from .models import Mascota, TransferenciaMascota
+from propietarios.models import Propietario
 
 class MascotaForm(forms.ModelForm):
     """Formulario para registro y edición de mascotas."""
@@ -16,3 +17,48 @@ class MascotaForm(forms.ModelForm):
             'foto': forms.FileInput(attrs={'class': 'form-control'}),
             'observaciones': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Observaciones adicionales'}),
         }
+
+
+class TransferenciaMascotaForm(forms.Form):
+    """Formulario para transferir una mascota de un propietario a otro (HU-010)."""
+    
+    mascota = forms.ModelChoiceField(
+        queryset=Mascota.objects.filter(activo=True),
+        label='Mascota',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+        help_text='Seleccione la mascota a transferir',
+        empty_label='Seleccione una mascota...'
+    )
+    
+    nuevo_propietario = forms.ModelChoiceField(
+        queryset=Propietario.objects.all(),
+        label='Nuevo Propietario',
+        widget=forms.Select(attrs={'class': 'form-select'}),
+        help_text='Seleccione el nuevo propietario',
+        empty_label='Seleccione un propietario...'
+    )
+    
+    motivo = forms.CharField(
+        required=False,
+        label='Motivo de la transferencia',
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'Motivo de la transferencia (opcional)'
+        }),
+        max_length=500
+    )
+    
+    def clean(self):
+        """Validar que no se transfiera a sí mismo."""
+        cleaned_data = super().clean()
+        mascota = cleaned_data.get('mascota')
+        nuevo_propietario = cleaned_data.get('nuevo_propietario')
+        
+        if mascota and nuevo_propietario:
+            if mascota.propietario == nuevo_propietario:
+                raise forms.ValidationError(
+                    'No se puede transferir la mascota al mismo propietario actual.'
+                )
+        
+        return cleaned_data

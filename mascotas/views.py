@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Mascota, TransferenciaMascota
-from .forms import MascotaForm
+from .forms import MascotaForm, TransferenciaMascotaForm
 from propietarios.models import Propietario
 from autenticacion.models import Usuario
+from autenticacion.decorators import staff_required
 
 @login_required
 def registrar_mascota(request, propietario_id):
@@ -55,4 +56,45 @@ def editar_mascota(request, pk):
         'form': form, 
         'titulo': f'Editar Mascota: {mascota.nombre}',
         'propietario': mascota.propietario
+    })
+
+
+@login_required
+@staff_required
+def transferir_mascota(request):
+    """Transferir una mascota de un propietario a otro (HU-010) - Solo staff."""
+    if request.method == 'POST':
+        form = TransferenciaMascotaForm(request.POST)
+        if form.is_valid():
+            mascota = form.cleaned_data['mascota']
+            nuevo_propietario = form.cleaned_data['nuevo_propietario']
+            motivo = form.cleaned_data.get('motivo', '')
+            
+            # Guardar propietario anterior
+            propietario_anterior = mascota.propietario
+            
+            # Crear registro de transferencia
+            transferencia = TransferenciaMascota.objects.create(
+                mascota=mascota,
+                propietario_anterior=propietario_anterior,
+                propietario_nuevo=nuevo_propietario,
+                usuario_responsable=request.user,
+                motivo=motivo
+            )
+            
+            # Actualizar propietario de la mascota
+            mascota.propietario = nuevo_propietario
+            mascota.save()
+            
+            messages.success(
+                request, 
+                f'Mascota {mascota.nombre} transferida exitosamente de {propietario_anterior.nombre} a {nuevo_propietario.nombre}.'
+            )
+            return redirect('propietarios:detalle', pk=nuevo_propietario.pk)
+    else:
+        form = TransferenciaMascotaForm()
+    
+    return render(request, 'mascotas/transferir.html', {
+        'form': form,
+        'titulo': 'Transferir Mascota'
     })

@@ -31,3 +31,4 @@ crispy-bootstrap5==2024.10
 
 # Testing
 coverage==7.6.10
+channels

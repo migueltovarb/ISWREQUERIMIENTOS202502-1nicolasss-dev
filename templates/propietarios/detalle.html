@@ -81,4 +81,86 @@
         </div>
     </div>
 </div>
+
+{% if user.rol != 'PROPIETARIO' %}
+<!-- Historial de Transferencias -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0 py-3">
+                <h3 class="font-titulo text-primary-mydog mb-0">
+                    <i class="bi bi-clock-history"></i> Historial de Transferencias
+                </h3>
+            </div>
+            <div class="card-body">
+                {% if propietario.transferencias_entrantes.all or propietario.transferencias_salientes.all %}
+                    <!-- Transferencias Entrantes -->
+                    {% if propietario.transferencias_entrantes.all %}
+                    <h5 class="text-success mb-3">
+                        <i class="bi bi-arrow-down-circle"></i> Mascotas Recibidas
+                    </h5>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-sm">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Mascota</th>
+                                    <th>Propietario Anterior</th>
+                                    <th>Fecha</th>
+                                    <th>Responsable</th>
+                                    <th>Motivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for transferencia in propietario.transferencias_entrantes.all %}
+                                <tr>
+                                    <td><strong>{{ transferencia.mascota.nombre }}</strong></td>
+                                    <td>{{ transferencia.propietario_anterior.nombre }}</td>
+                                    <td>{{ transferencia.fecha_transferencia|date:"d/m/Y H:i" }}</td>
+                                    <td>{{ transferencia.usuario_responsable.get_full_name }}</td>
+                                    <td>{{ transferencia.motivo|default:"—" }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Transferencias Salientes -->
+                    {% if propietario.transferencias_salientes.all %}
+                    <h5 class="text-warning mb-3">
+                        <i class="bi bi-arrow-up-circle"></i> Mascotas Transferidas
+                    </h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Mascota</th>
+                                    <th>Nuevo Propietario</th>
+                                    <th>Fecha</th>
+                                    <th>Responsable</th>
+                                    <th>Motivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for transferencia in propietario.transferencias_salientes.all %}
+                                <tr>
+                                    <td><strong>{{ transferencia.mascota.nombre }}</strong></td>
+                                    <td>{{ transferencia.propietario_nuevo.nombre }}</td>
+                                    <td>{{ transferencia.fecha_transferencia|date:"d/m/Y H:i" }}</td>
+                                    <td>{{ transferencia.usuario_responsable.get_full_name }}</td>
+                                    <td>{{ transferencia.motivo|default:"—" }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
+                {% else %}
+                    <p class="text-muted mb-0">No hay transferencias registradas para este propietario.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
