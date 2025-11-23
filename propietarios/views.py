@@ -64,7 +64,17 @@ def detalle_propietario(request, pk):
     propietario = get_object_or_404(Propietario, pk=pk)
     if request.user.rol == 'PROPIETARIO' and propietario.usuario_id != request.user.id:
         return redirect('home')
-    return render(request, 'propietarios/detalle.html', {'propietario': propietario})
+    
+    # Obtener citas completadas pendientes de pago
+    citas_pendientes_pago = propietario.citas.filter(
+        estado='COMPLETADA',
+        pagado=False
+    ).select_related('mascota', 'servicio').order_by('-fecha', '-hora')
+    
+    return render(request, 'propietarios/detalle.html', {
+        'propietario': propietario,
+        'citas_pendientes_pago': citas_pendientes_pago
+    })
 
 @login_required
 def editar_propietario(request, pk):

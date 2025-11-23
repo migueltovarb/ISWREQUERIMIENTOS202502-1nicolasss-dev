@@ -76,7 +76,11 @@ def agendar_cita(request):
 def detalle_cita(request, pk):
     """Vista para ver detalles y gestionar una cita."""
     cita = get_object_or_404(Cita, pk=pk)
-    return render(request, 'citas/detalle.html', {'cita': cita})
+    necesita_pago = cita.necesita_pago()
+    return render(request, 'citas/detalle.html', {
+        'cita': cita,
+        'necesita_pago': necesita_pago
+    })
 
 @login_required
 def cargar_mascotas(request):

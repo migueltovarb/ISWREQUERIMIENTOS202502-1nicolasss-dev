@@ -82,6 +82,65 @@
     </div>
 </div>
 
+<!-- Citas Pendientes de Pago -->
+{% if citas_pendientes_pago %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-0 py-3">
+                <h3 class="font-titulo text-primary-mydog mb-0">
+                    <i class="bi bi-credit-card"></i> Citas Pendientes de Pago
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                    <strong>Atención:</strong> Tiene {{ citas_pendientes_pago.count }} cita(s) completada(s) pendiente(s) de pago.
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Mascota</th>
+                                <th>Servicio</th>
+                                <th>Veterinario</th>
+                                <th>Monto</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cita in citas_pendientes_pago %}
+                            <tr>
+                                <td>{{ cita.fecha|date:"d/m/Y" }} {{ cita.hora|time:"H:i" }}</td>
+                                <td>
+                                    <strong>{{ cita.mascota.nombre }}</strong>
+                                    <br><small class="text-muted">{{ cita.mascota.especie }}</small>
+                                </td>
+                                <td>{{ cita.servicio.get_nombre_display }}</td>
+                                <td>Dr. {{ cita.veterinario.get_full_name }}</td>
+                                <td>
+                                    <strong class="text-success">${{ cita.servicio.precio|floatformat:0 }}</strong>
+                                </td>
+                                <td>
+                                    <a href="{% url 'pagos:registrar' cita.id %}" class="btn btn-sm btn-success">
+                                        <i class="bi bi-credit-card"></i> Pagar
+                                    </a>
+                                    <a href="{% url 'citas:detalle' cita.id %}" class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-eye"></i> Ver
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 {% if user.rol != 'PROPIETARIO' %}
 <!-- Historial de Transferencias -->
 <div class="row mt-4">

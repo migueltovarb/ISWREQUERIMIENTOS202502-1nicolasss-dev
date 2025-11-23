@@ -8,11 +8,26 @@
     <div class="col-md-8">
         <div class="card shadow-sm border-0">
             <div class="card-body p-4">
-                <h2 class="font-titulo text-primary-mydog mb-4">{{ titulo }}</h2>
+                <h2 class="font-titulo text-primary-mydog mb-4">
+                    <i class="bi bi-credit-card"></i> {{ titulo }}
+                </h2>
                 
                 {% if cita %}
                 <div class="alert alert-info mb-4">
-                    <i class="bi bi-info-circle-fill"></i> Registrando pago para la cita: <strong>{{ cita.servicio.nombre }}</strong> - {{ cita.fecha }}
+                    <h5 class="alert-heading"><i class="bi bi-info-circle-fill"></i> Detalles de la Cita</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Servicio:</strong> {{ cita.servicio.get_nombre_display }}</p>
+                            <p class="mb-1"><strong>Mascota:</strong> {{ cita.mascota.nombre }}</p>
+                            <p class="mb-1"><strong>Fecha:</strong> {{ cita.fecha|date:"d/m/Y" }} {{ cita.hora|time:"H:i" }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Veterinario:</strong> Dr. {{ cita.veterinario.get_full_name }}</p>
+                            <p class="mb-1"><strong>Propietario:</strong> {{ cita.propietario.nombre }}</p>
+                            <p class="mb-0"><strong>Monto a pagar:</strong> <span class="text-success fs-5">${{ cita.servicio.precio|floatformat:0 }}</span></p>
+                        </div>
+                    </div>
                 </div>
                 {% endif %}
                 
@@ -21,8 +36,14 @@
                     {{ form|crispy }}
                     
                     <div class="d-flex justify-content-end gap-2 mt-4">
-                        <a href="{% url 'pagos:lista' %}" class="btn btn-outline-secondary">Cancelar</a>
-                        <button type="submit" class="btn btn-primary-mydog">Registrar Pago</button>
+                        {% if cita %}
+                            <a href="{% url 'citas:detalle' cita.id %}" class="btn btn-outline-secondary">Cancelar</a>
+                        {% else %}
+                            <a href="{% url 'pagos:lista' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        {% endif %}
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-circle"></i> Confirmar Pago
+                        </button>
                     </div>
                 </form>
             </div>

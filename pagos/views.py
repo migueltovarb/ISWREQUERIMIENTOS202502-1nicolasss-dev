@@ -20,6 +20,10 @@ def registrar_pago(request, cita_id=None):
     cita = None
     if cita_id:
         cita = get_object_or_404(Cita, pk=cita_id)
+        # Verificar permisos
+        if request.user.rol == 'PROPIETARIO' and cita.propietario.usuario_id != request.user.id:
+            messages.error(request, 'No tienes permisos para pagar esta cita.')
+            return redirect('home')
     
     if request.method == 'POST':
         form = PagoForm(request.POST, cita_id=cita_id)
@@ -36,6 +40,10 @@ def registrar_pago(request, cita_id=None):
                 pago.estado = 'COMPLETADO' # Simulamos pago exitoso inmediato
                 pago.save()
                 
+                # Marcar cita como pagada
+                if cita:
+                    cita.marcar_como_pagado()
+                
                 # Generar Factura Automáticamente
                 Factura.objects.create(
                     pago=pago,
@@ -45,7 +53,14 @@ def registrar_pago(request, cita_id=None):
                     total=pago.monto
                 )
                 
-                messages.success(request, 'Pago registrado y factura generada exitosamente.')
+                if cita:
+                    messages.success(
+                        request, 
+                        f'Pago registrado exitosamente por {cita.servicio.get_nombre_display()} - {cita.mascota.nombre}. Factura generada.'
+                    )
+                else:
+                    messages.success(request, 'Pago registrado y factura generada exitosamente.')
+                
                 return redirect('pagos:detalle', pk=pago.pk)
     else:
         form = PagoForm(cita_id=cita_id)
@@ -53,7 +68,7 @@ def registrar_pago(request, cita_id=None):
     context = {
         'form': form,
         'cita': cita,
-        'titulo': 'Registrar Pago'
+        'titulo': f'Pagar {cita.servicio.get_nombre_display()} - {cita.mascota.nombre}' if cita else 'Registrar Pago'
     }
     return render(request, 'pagos/formulario.html', context)
 

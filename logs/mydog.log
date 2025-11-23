@@ -4461,3 +4461,2339 @@ INFO 2025-11-23 05:30:01,122 basehttp "GET /pagos/registrar/ HTTP/1.1" 200 10869
 INFO 2025-11-23 05:30:09,020 basehttp "GET /pagos/ HTTP/1.1" 200 11137
 INFO 2025-11-23 05:30:16,602 basehttp "GET /pagos/5/ HTTP/1.1" 200 8808
 INFO 2025-11-23 05:30:21,484 basehttp "GET / HTTP/1.1" 200 8157
+INFO 2025-11-23 05:32:36,721 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:32:36,728 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 05:33:27,799 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:33:27,833 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 05:33:29,351 basehttp "GET /notificaciones/ HTTP/1.1" 200 8325
+WARNING 2025-11-23 05:33:29,458 log Not Found: /ws/notificaciones/
+WARNING 2025-11-23 05:33:29,459 basehttp "GET /ws/notificaciones/ HTTP/1.1" 404 3965
+INFO 2025-11-23 05:33:31,873 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 05:33:33,011 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 05:33:35,227 basehttp "GET /historiales/5/ HTTP/1.1" 200 8022
+INFO 2025-11-23 05:33:36,977 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 05:34:09,835 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\citas\models.py changed, reloading.
+INFO 2025-11-23 05:34:10,838 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:34:14,923 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 05:34:15,007 basehttp "GET /static/css/base.css HTTP/1.1" 200 2495
+INFO 2025-11-23 05:34:15,015 basehttp "GET /static/css/responsive.css HTTP/1.1" 200 427
+INFO 2025-11-23 05:34:16,158 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 05:34:19,151 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:34:19,182 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 05:34:22,800 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:34:22,829 basehttp "GET / HTTP/1.1" 200 8157
+ERROR 2025-11-23 05:34:24,871 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:34:24,886 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+INFO 2025-11-23 05:34:55,379 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\propietarios\views.py changed, reloading.
+INFO 2025-11-23 05:34:56,473 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-23 05:34:57,081 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:34:57,092 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+INFO 2025-11-23 05:34:59,503 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py changed, reloading.
+INFO 2025-11-23 05:35:00,533 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-23 05:35:04,462 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:04,474 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:35:05,656 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:05,661 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:35:06,397 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:06,402 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:35:06,844 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:06,853 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:35:20,447 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:20,452 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:35:21,062 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:35:21,071 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:36:13,012 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:36:13,019 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:36:16,284 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:36:16,290 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:36:54,771 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:36:54,781 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:37:06,332 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:37:06,339 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:37:09,257 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:37:09,262 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:37:16,075 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:37:16,083 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+ERROR 2025-11-23 05:37:24,053 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:37:24,059 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+INFO 2025-11-23 05:37:27,556 basehttp "GET / HTTP/1.1" 200 8157
+ERROR 2025-11-23 05:38:09,924 log Internal Server Error: /pagos/
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 243, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'cita'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: citas_cita.pagado
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\autenticacion\decorators.py", line 22, in wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\pagos\views.py", line 15, in lista_pagos
+    return render(request, 'pagos/lista.html', {'pagos': pagos})
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 261, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 224, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 631, in get
+    num = len(clone)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: citas_cita.pagado
+ERROR 2025-11-23 05:38:09,933 basehttp "GET /pagos/ HTTP/1.1" 500 289622
+INFO 2025-11-23 05:39:03,052 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:39:03,122 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:39:05,289 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:39:05,414 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:39:07,920 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:39:11,253 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:40:06,426 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\services.py changed, reloading.
+INFO 2025-11-23 05:40:06,653 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\services.py changed, reloading.
+INFO 2025-11-23 05:40:10,066 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:40:10,187 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:41:05,296 basehttp "GET /pagos/ HTTP/1.1" 200 11137
+INFO 2025-11-23 05:41:09,137 basehttp "GET /pagos/registrar/ HTTP/1.1" 200 11078
+INFO 2025-11-23 05:41:19,818 basehttp "GET /pagos/ HTTP/1.1" 200 11137
+INFO 2025-11-23 05:41:21,421 basehttp "GET /citas/ HTTP/1.1" 200 10523
+INFO 2025-11-23 05:41:21,887 basehttp "GET /citas/api/eventos/?start=2025-10-27T00%3A00%3A00-05%3A00&end=2025-12-08T00%3A00%3A00-05%3A00 HTTP/1.1" 200 2885
+INFO 2025-11-23 05:41:24,182 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:41:24,201 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 05:41:28,952 basehttp "POST /autenticacion/login/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:41:29,008 basehttp "GET / HTTP/1.1" 200 5619
+INFO 2025-11-23 05:42:05,926 basehttp "GET /historiales/mis/ HTTP/1.1" 200 7453
+INFO 2025-11-23 05:42:06,901 basehttp "GET /historiales/mascota/4/ HTTP/1.1" 200 6787
+INFO 2025-11-23 05:42:08,249 basehttp "GET /mascotas/4/ HTTP/1.1" 200 8260
+INFO 2025-11-23 05:42:12,926 basehttp "GET /autenticacion/logout/ HTTP/1.1" 302 0
+INFO 2025-11-23 05:42:12,941 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4898
+INFO 2025-11-23 05:45:15,384 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:45:15,466 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:45:17,492 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:17,598 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:21,869 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:45:22,186 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\sistema_veterinaria\settings.py changed, reloading.
+INFO 2025-11-23 05:45:24,456 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:24,689 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:29,870 basehttp "GET /autenticacion/login/ HTTP/1.1" 200 4585
+INFO 2025-11-23 05:45:30,479 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\services.py changed, reloading.
+INFO 2025-11-23 05:45:30,964 autoreload C:\Users\Nicolas\Desktop\PROYECTO_FINAL_DJANGO_NICOLAS\notificaciones\services.py changed, reloading.
+INFO 2025-11-23 05:45:33,762 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:34,173 autoreload Watching for file changes with StatReloader
+INFO 2025-11-23 05:45:37,290 autoreload Watching for file changes with StatReloader

@@ -15,14 +15,26 @@
                     <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
                 </div>
                 
-                <h2 class="mb-4">${{ pago.monto }}</h2>
+                <h2 class="mb-4">${{ pago.monto|floatformat:0 }}</h2>
+                
+                {% if pago.cita %}
+                <div class="alert alert-light mb-4">
+                    <h5 class="mb-3"><i class="bi bi-receipt"></i> Pago por:</h5>
+                    <p class="mb-1"><strong>{{ pago.cita.servicio.get_nombre_display }}</strong></p>
+                    <p class="mb-1">Mascota: {{ pago.cita.mascota.nombre }}</p>
+                    <p class="mb-0">Fecha de consulta: {{ pago.cita.fecha|date:"d/m/Y" }}</p>
+                    <a href="{% url 'citas:detalle' pago.cita.id %}" class="btn btn-sm btn-outline-primary mt-2">
+                        <i class="bi bi-calendar-check"></i> Ver Cita
+                    </a>
+                </div>
+                {% endif %}
                 
                 <div class="row justify-content-center mb-4">
                     <div class="col-md-8">
                         <ul class="list-group list-group-flush text-start">
                             <li class="list-group-item d-flex justify-content-between">
                                 <span class="text-muted">Fecha:</span>
-                                <strong>{{ pago.fecha_pago }}</strong>
+                                <strong>{{ pago.fecha_pago|date:"d/m/Y H:i" }}</strong>
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
                                 <span class="text-muted">Propietario:</span>
@@ -43,7 +55,11 @@
                 </div>
                 
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="{% url 'pagos:lista' %}" class="btn btn-outline-secondary">Volver al Historial</a>
+                    {% if user.rol != 'PROPIETARIO' %}
+                        <a href="{% url 'pagos:lista' %}" class="btn btn-outline-secondary">Volver al Historial</a>
+                    {% else %}
+                        <a href="{% url 'propietarios:detalle' user.propietario.id %}" class="btn btn-outline-secondary">Volver a Mi Perfil</a>
+                    {% endif %}
                     {% if factura %}
                     <a href="{% url 'pagos:factura_print' factura.pk %}" target="_blank" class="btn btn-primary-mydog">
                         <i class="bi bi-printer"></i> Imprimir Factura

@@ -102,6 +102,13 @@ class Cita(models.Model):
         help_text='Motivo por el cual se canceló la cita'
     )
     
+    # Estado de pago
+    pagado = models.BooleanField(
+        default=False,
+        verbose_name='Pagado',
+        help_text='Indica si la cita ha sido pagada'
+    )
+    
     # Campos de auditoría
     fecha_creacion = models.DateTimeField(
         auto_now_add=True,
@@ -237,6 +244,20 @@ class Cita(models.Model):
             return False, 'La reprogramación requiere al menos 12 horas de anticipación'
         
         return True, ''
+    
+    def necesita_pago(self):
+        """
+        Verifica si la cita necesita pago.
+        
+        Returns:
+            bool: True si la cita está completada y no ha sido pagada
+        """
+        return self.estado == 'COMPLETADA' and not self.pagado
+    
+    def marcar_como_pagado(self):
+        """Marca la cita como pagada."""
+        self.pagado = True
+        self.save(update_fields=['pagado'])
 
 
 class ListaEspera(models.Model):
